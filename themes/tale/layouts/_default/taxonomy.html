@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<main class="h-feed">
+<!-- <main class="h-feed">
 	<h1><a class="p-name u-url" href="{{ .Permalink }}">{{ strings.FirstUpper .Data.Singular }} {{ .Title }}</a></h1>
 	<div class="catalogue">
 		{{ range (.Paginate (where .RegularPages "Params.deleted" false)).Pages }}
@@ -9,6 +9,6 @@
 	</div>
 
 	{{ partialCached "pagination.html" . .Paginator }}
-</main>
+</main> -->
 
 {{ end }}
