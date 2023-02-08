@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<main class="h-feed">
+	<h1><a class="p-name u-url" href="{{ .Permalink }}">IndieWeb post types</a></h1>
+
+	<p>This content type is full of <a href="https://indieweb.org/posts#Types_of_Posts">IndieWeb post types</a>, which are all content types which allow me to take greater ownership of my own data. These are likely unrelated to my <a href="/posts/">blog posts</a>. You can find a better breakdown by actual post kind below:</p>
+
+	<ul>
+		{{ range $taxonomyname, $taxonomy := index .Site.Taxonomies "kind" }}
+		<li>
+			<a href="/kind/{{ $taxonomyname }}">{{ $taxonomyname }}</a>
+		</li>
+		{{ end }}
+	</ul>
+
+	<div class="catalogue">
+		{{ range (.Paginate (where .Pages "Params.deleted" false)).Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+	</div>
+
+	{{ template "_internal/pagination.html" . }}
+</main>
+
+{{ end }}

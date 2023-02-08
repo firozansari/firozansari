@@ -1,0 +1,13 @@
+{
+  "reference": "./Sleepycat.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/Sleepycat.json",
+  "referenceNumber": "282",
+  "name": "Sleepycat License",
+  "licenseId": "Sleepycat",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/Sleepycat"
+  ],
+  "isOsiApproved": true
+}

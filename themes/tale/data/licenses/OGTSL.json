@@ -1,0 +1,13 @@
+{
+  "reference": "./OGTSL.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/OGTSL.json",
+  "referenceNumber": "119",
+  "name": "Open Group Test Suite License",
+  "licenseId": "OGTSL",
+  "seeAlso": [
+    "http://www.opengroup.org/testing/downloads/The_Open_Group_TSL.txt",
+    "http://www.opensource.org/licenses/OGTSL"
+  ],
+  "isOsiApproved": true
+}

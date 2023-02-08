@@ -1,0 +1,7 @@
+{{ with index $.Site.Data.kinds .Params.kind }}
+<p class="kind">
+	<a href="/kind/{{ $.Params.kind }}">
+		<i class="fa {{ .icon }}"></i>&nbsp;<span class="p-kind">{{ .name }}</span>
+	</a>
+</p>
+{{ end }}

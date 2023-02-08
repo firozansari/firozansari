@@ -1,0 +1,19 @@
+<aside class="app">
+  {{ with .Params.client_id }}
+    {{ $u := (urls.Parse .).Host }}
+    {{ with (index $.Site.Data.apps $u) }}
+      <p>This was published using <a href="{{ index .properties.url 0 }}" data-proofer-ignore>
+        {{ with .properties.logo }}
+          <img src="{{ index . 0 }}" alt="Logo for {{ $u }}" loading=lazy />
+        {{ end }}
+        {{ with .properties.name }}
+          {{ index . 0 }}
+        {{ else }}
+          {{ $u }}
+        {{ end }}
+      </a>.</p>
+    {{ else }}
+      <p>This was published using <a href="{{ . }}" data-proofer-ignore>{{ . }}</a>.</p>
+    {{ end }}
+  {{ end }}
+</aside>

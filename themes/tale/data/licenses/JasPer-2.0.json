@@ -1,0 +1,12 @@
+{
+  "reference": "./JasPer-2.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/JasPer-2.0.json",
+  "referenceNumber": "232",
+  "name": "JasPer License",
+  "licenseId": "JasPer-2.0",
+  "seeAlso": [
+    "http://www.ece.uvic.ca/~mdadams/jasper/LICENSE"
+  ],
+  "isOsiApproved": false
+}

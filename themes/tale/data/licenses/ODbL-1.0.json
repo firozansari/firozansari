@@ -1,0 +1,13 @@
+{
+  "reference": "./ODbL-1.0.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/ODbL-1.0.json",
+  "referenceNumber": "239",
+  "name": "ODC Open Database License v1.0",
+  "licenseId": "ODbL-1.0",
+  "seeAlso": [
+    "http://www.opendatacommons.org/licenses/odbl/1.0/"
+  ],
+  "isOsiApproved": false
+}

@@ -1,0 +1,91 @@
+{{ if .Params.Start }}
+<p class="p-summary">{{ .Description }}</p>
+<p>
+	From
+	<time class="dt-start" datetime="{{ dateFormat "2006-01-02T15:04:05-0700" .Params.Start }}">
+		{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" .Params.Start }}
+	</time>
+	to
+	<time class="dt-end" datetime="{{ dateFormat "2006-01-02T15:04:05-0700" .Params.end }}">
+		{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" .Params.End }}
+	</time>
+	{{ if .Params.card }}
+	<span class="p-location h-card">
+		at
+		{{ if .Params.card.url }}
+		<a href="{{ .Params.card.url }}" class="u-url p-name">{{ .Params.card.name }}</a>
+		{{ else }}
+		<span class="p-name">{{ .Params.card.name }}</span>
+		{{ end }}
+
+		{{ if .Params.Adr }}
+		<span class="p-street-address">{{ .Params.adr.street_address }}</span>
+		<span class="p-locality">{{ .Params.adr.locality }}</span>
+		<span class="p-country-name">{{ .Params.adr.country_name }}</span>
+		<span class="p-postal-code">{{ .Params.adr.postal_code }}</span>
+		{{ end }}
+
+		{{ if .Params.Geo }}
+		<span class="p-latitude">{{ .Params.geo.latitude }}</span>
+		<span class="p-longitude">{{ .Params.geo.longitude }}</span>
+		{{ end }}
+	</span>
+	{{ else if .Params.Adr }}
+		at
+	<span class="p-location h-adr">
+		<span class="p-street-address">{{ .Params.adr.street_address }}</span>
+		<span class="p-locality">{{ .Params.adr.locality }}</span>
+		<span class="p-country-name">{{ .Params.adr.country_name }}</span>
+		<span class="p-postal-code">{{ .Params.adr.postal_code }}</span>
+	</span>
+	{{ else if .Params.Geo }}
+		at
+	<span class="p-location h-geo">
+		<span class="p-latitude">{{ .Params.geo.latitude }}</span>
+		<span class="p-longitude">{{ .Params.geo.longitude }}</span>
+	</span>
+	{{ end }}
+</p>
+
+{{ $eventDescription := printf "%s More details can be found at %s%s" (trim (.Content | plainify) "\n") .Site.Params.LiveSiteUrl .Permalink }}
+{{ $eventLocation := printf "%s, %s, %s" .Params.adr.street_address .Params.adr.locality .Params.adr.country_name }}
+
+{{ if .Content }}
+<div class="e-description">{{ .Content }}</div>
+{{ end }}
+
+<p>Want to add this event to your calendar?</p>
+
+<ul>
+	<li>Add this event <a href="{{ .Permalink }}/index.ics">as an iCalendar format</a>.</li>
+	<li>Add this event <a data-proofer-ignore href="https://www.google.com/calendar/render?action=TEMPLATE&text={{ .Title }}&details={{ $eventDescription }}&location={{ $eventLocation }}&dates={{ dateFormat "20060102T150405" .Params.Start }}/{{ dateFormat "20060102T150405" .Params.End }}&ctz=Europe/London">to your Google Calendar</a>.</li>
+</ul>
+{{ else }}
+{{ if (isset .Params "h") }}
+
+{{ with .Params.Properties.summary }}
+<p class="p-summary">{{ index . 0 }}</p>
+{{ end }}
+<p>
+	From
+	<time class="dt-start" datetime="{{ dateFormat "2006-01-02T15:04:05-0700" (index .Params.Properties.start 0) }}">
+		{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" (index .Params.Properties.start 0) }}
+	</time>
+	to
+	<time class="dt-end" datetime="{{ dateFormat "2006-01-02T15:04:05-0700" (index .Params.Properties.end 0) }}">
+		{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" (index .Params.Properties.end 0) }}
+	</time>
+
+	{{ with .Params.Properties.location }}
+	at <span class="p-location">{{ index . 0 }}</span>
+	{{- end }}.
+</p>
+{{ else }}
+	{{ .Description }}
+{{ end }}
+
+{{ with .Params.Properties.url }}
+	<a class="u-url" href="{{ index . 0 }}"></a>
+{{ end }}
+
+{{ end }}

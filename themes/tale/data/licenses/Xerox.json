@@ -1,0 +1,12 @@
+{
+  "reference": "./Xerox.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Xerox.json",
+  "referenceNumber": "156",
+  "name": "Xerox License",
+  "licenseId": "Xerox",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Xerox"
+  ],
+  "isOsiApproved": false
+}

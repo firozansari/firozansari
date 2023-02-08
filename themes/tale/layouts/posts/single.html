@@ -1,0 +1,98 @@
+{{ define "main" }}
+
+<main>
+	<a name="top"></a>
+	<div class="h-entry">
+		<div class="post">
+
+
+			{{ $image := .Site.Params.Image }}
+			{{ if .Params.Image }}
+				{{ $image = .Params.Image }}
+			{{ end }}
+			{{ if not (hasPrefix $image "https://media.jvt.me") }}
+				{{ $image = printf "%s%s" .Site.Params.LiveSiteUrl $image }}
+			{{ end }}
+
+			{{ partial "single/posts/post-info.html" . }}
+			{{ partial "single/title.html" . }}
+
+			{{ if not (eq $image (printf "%s%s" .Site.Params.LiveSiteUrl .Site.Params.image)) }}
+				<img class="u-featured" src="{{ $image }}" alt="Featured image for sharing metadata for article" loading=lazy>
+			{{ else }}
+				<p class=hidden>This post's featured URL for sharing metadata is <a class="u-featured" href="{{ $image }}">{{ $image }}</a>.</p>
+			{{ end }}
+
+			{{ partial "single/table-of-contents.html" . }}
+
+			{{ partial "single/header.html" . }}
+
+			<div class="e-content">
+				{{ .Render "content" }}
+			</div>
+
+			{{ partial "single/footer.html" . }}
+		</div>
+
+		<div class="post-details">
+			<div class="hidden">
+				<p>This post's permalink is <a class="u-url" href="{{ .Site.Params.LiveSiteUrl }}{{ .Permalink }}">{{ .Site.Params.LiveSiteUrl }}{{ .Permalink }}</a> and has the following summary:</p>.
+				<blockquote class="p-summary">{{ .Description }}</blockquote>
+				<p>The canonical URL for this post is
+				{{ if .Params.Canonical_Url }}
+				<a class="u-uid" href="{{ .Params.Canonical_Url }}">{{ .Params.Canonical_Url }}</a>
+				{{ else }}
+				<a class="u-uid" href="{{ .Site.Params.LiveSiteUrl }}{{ .Permalink }}">{{ .Site.Params.LiveSiteUrl }}{{ .Permalink }}</a>
+
+				{{ end }}
+				.</p>
+			</div>
+			<p>Written by {{ partialCached "inline-hcard.html" . }} on <strong><time class="dt-published" datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" .PublishDate }}">{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" .PublishDate }}</time></strong>
+			{{- if .GitInfo -}}
+			{{- if .GitInfo.AuthorDate -}}
+			, and last updated on <strong><a href="https://gitlab.com/firozansari/jvt.me/commit/{{ .GitInfo.Hash }}"><time class="dt-updated" datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" .GitInfo.AuthorDate }}">{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" .GitInfo.AuthorDate }}</time></a></strong>
+			{{- end -}}.
+			{{- end -}}
+			</p>
+			{{ $licenseCode := index $.Site.Data.licenses .Params.License_Code }}
+			{{ $licenseProse := index $.Site.Data.licenses .Params.License_Prose }}
+
+			<p>Content for this article is shared under the terms of the <a href="{{ index $licenseProse.seeAlso 0 }}">{{ $licenseProse.name }}</a>, and code is shared under the <a href="{{ index $licenseCode.seeAlso 0 }}">{{ $licenseCode.name }}</a>.
+			</p>
+
+			<p>
+				<i class="fa fa-tags"></i>
+				{{ range .Params.Tags }}
+				<a href="/tags/{{ . }}/">#<span class="p-category">{{ . }}</span></a>
+				{{- end -}}.
+			</p>
+
+			{{ partial "syndication.html" . }}
+		</div>
+	</div>
+
+	{{ partialCached "support-me.html" . }}
+
+	<div class="post-details">
+		{{ partialCached "filed-under.html" . .Params.Kind }}
+
+		{{ with .Params.Series }}
+		<p>This post is part of the series <a class="u-series" href="/series/{{ . }}">{{ . }}</a>.</p>
+		{{ end }}
+
+		{{ partialCached "webmention.html" . .Permalink }}
+	</div>
+
+	<div class="pagination">
+		{{- if .PrevPage }}
+		<a href="{{ .PrevPage.Permalink }}" class="left arrow">&#8592;</a>
+		{{- end }}
+		{{- if .NextPage }}
+		<a href="{{ .NextPage.Permalink }}" class="right arrow">&#8594;</a>
+		{{- end }}
+
+		<a href="#top" class="top">Top</a>
+	</div>
+</main>
+
+{{ end }}

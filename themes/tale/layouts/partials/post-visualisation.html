@@ -1,0 +1,186 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<p>
+  <canvas id="hours"></canvas>
+  <canvas id="days"></canvas>
+  <canvas id="daysOfWeek"></canvas>
+  <canvas id="months"></canvas>
+</p>
+
+<script>
+var labels = {
+  hours: [
+    "00:00",
+    "01:00",
+    "02:00",
+    "03:00",
+    "04:00",
+    "05:00",
+    "06:00",
+    "07:00",
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+    "23:00"
+  ],
+  days: [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31"
+  ],
+  daysOfWeek: [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+  ],
+  months: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ]
+};
+
+function generateDataset(obj, config) {
+  var values = []
+  for(var key in obj) {
+    values.push(obj[key]);
+  }
+  return {
+    label: config.label,
+    data: values,
+    borderColor: config.borderColor,
+    fill: false
+  };
+}
+
+function renderGraph(canvasId, labels, datasets, label) {
+  new Chart(document.getElementById(canvasId),
+    {
+      type: "line",
+      data: {
+        labels: labels,
+        datasets: datasets
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+}
+
+fetch('/post-frequency.json')
+  .then(res => res.json())
+  .then((theData) => {
+    var hours = [];
+    var config = {
+      articles: {
+        borderColor: 'rgb(179, 36, 212)',
+        label: 'Articles'
+      },
+      bookmarks: {
+        borderColor: 'rgb(50, 211, 207)',
+        label: 'Bookmarks'
+      },
+      notes: {
+        borderColor: 'rgb(211, 171, 50)',
+        label: 'Notes'
+      },
+      replies: {
+        borderColor: 'rgb(206, 41, 85)',
+        label: 'Replies'
+      },
+      reposts: {
+        borderColor: 'rgb(0, 0, 0)',
+        label: 'Reposts'
+      },
+      rsvps: {
+        borderColor: 'rgb(64, 25, 179)',
+        label: 'RSVPs'
+      },
+      blogumentation: {
+        borderColor: 'rgb(255, 165, 0)',
+        label: 'Blogumentation'
+      }
+    }
+
+    var hours = [];
+    var days = [];
+    var daysOfWeek = [];
+    var months = [];
+    for (var postType in config) {
+      console.log(postType);
+      if (config.hasOwnProperty(postType)) {
+        hours.push(generateDataset(theData[postType].hours, config[postType]));
+        // TODO: index days from 1
+        days.push(generateDataset(theData[postType].days, config[postType]));
+        daysOfWeek.push(generateDataset(theData[postType].daysOfWeek, config[postType]));
+        months.push(generateDataset(theData[postType].months, config[postType]));
+      }
+    }
+
+    renderGraph('hours', labels.hours, hours, 'Posts by hour of the day');
+    renderGraph('days', labels.days, days, 'Posts by days of the month');
+    renderGraph('daysOfWeek', labels.daysOfWeek, daysOfWeek, 'Posts by days of the week');
+    renderGraph('months', labels.months, months, 'Posts by month');
+  })
+  .catch(err => { throw err });
+</script>

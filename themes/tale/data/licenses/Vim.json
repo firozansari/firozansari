@@ -1,0 +1,13 @@
+{
+  "reference": "./Vim.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/Vim.json",
+  "referenceNumber": "127",
+  "name": "Vim License",
+  "licenseId": "Vim",
+  "seeAlso": [
+    "http://vimdoc.sourceforge.net/htmldoc/uganda.html"
+  ],
+  "isOsiApproved": false
+}

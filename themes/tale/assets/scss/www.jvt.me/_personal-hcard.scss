@@ -1,0 +1,15 @@
+#jvt-hcard {
+	display: flex;
+
+	.img-container {
+		flex: 15%;
+		margin: 1rem;
+		img {
+			width: 100%;
+		}
+	}
+
+	.text-container {
+		flex: 75%;
+	}
+}

@@ -1,0 +1,25 @@
+<p>
+{{ with index .Params.Properties "rsvp" }}
+  {{ with index . 0 }}
+    <data class="p-rsvp" value="{{ . }}">
+      {{ if eq "yes" . }}
+      I will be attending
+      {{ else if eq "no" . }}
+      I will not be attending
+      {{ else if eq "interested" . }}
+      I'm interested in attending
+      {{ else if eq "maybe" . }}
+      I <em>may</em> be attending
+      {{ else }}
+      {{ . }}
+      {{ end }}
+    </data>
+  {{ end }}
+{{ end }}
+
+{{ partialCached "generic-cite.html" (slice . "in-reply-to" $.Site) (slice "in-reply-to" (index .Params.Properties "in-reply-to")) }}
+
+{{ partialCached "mf2/property/content.html" . .Params.Properties }}
+    </a>
+  </span>
+</p>

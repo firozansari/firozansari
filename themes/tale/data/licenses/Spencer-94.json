@@ -1,0 +1,12 @@
+{
+  "reference": "./Spencer-94.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Spencer-94.json",
+  "referenceNumber": "27",
+  "name": "Spencer License 94",
+  "licenseId": "Spencer-94",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Henry_Spencer_Reg-Ex_Library_License"
+  ],
+  "isOsiApproved": false
+}

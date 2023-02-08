@@ -1,0 +1,12 @@
+{
+  "reference": "./dvipdfm.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/dvipdfm.json",
+  "referenceNumber": "137",
+  "name": "dvipdfm License",
+  "licenseId": "dvipdfm",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/dvipdfm"
+  ],
+  "isOsiApproved": false
+}

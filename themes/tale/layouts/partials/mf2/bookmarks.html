@@ -1,0 +1,16 @@
+<div class=e-summary>
+  Bookmarked {{ partialCached "generic-cite.html" (slice . "bookmark-of" $.Site) (slice "bookmark-of" (index .Params.Properties "bookmark-of")) }}
+</div>
+
+<div class=e-content>
+  {{ partialCached "mf2/property/content.html" . .Params.Properties }}
+</div>
+
+<p class="p-bridgy-twitter-content">
+	Recommended read: {{ with .Params.Properties.Name }}
+	{{ index . 0 }}
+	{{ else }}
+	{{ index (index .Params.Properties "bookmark-of") 0 }}
+	{{ end }}
+	{{ index (index .Params.Properties "bookmark-of") 0 }}
+</p>

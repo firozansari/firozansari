@@ -1,0 +1,14 @@
+<aside>
+  In reply to {{ partialCached "generic-cite.html" (slice . "in-reply-to" $.Site) (slice "in-reply-to" (index .Params.Properties "in-reply-to")) }}
+
+</aside>
+
+{{ partialCached "mf2/property/content.html" . .Params.Properties }}
+
+{{ with $.Params.Properties.Photo }}
+  <p class="photos">
+    {{ range . }}
+    <img class="u-photo" src="{{ .photo }}" alt="{{ .alt }}" title="{{ .alt }}" loading=lazy />
+    {{ end }}
+  </p>
+{{ end }}

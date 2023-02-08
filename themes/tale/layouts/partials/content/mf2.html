@@ -1,0 +1,4 @@
+{{ $partial := printf "mf2/%s.html" (.Params.Kind) }}
+{{ if templates.Exists (printf "partials/%s" $partial) }}
+{{ partial $partial . }}
+{{ end }}

@@ -1,0 +1,27 @@
+{
+  "items": [
+    {{ range where (where .Site.RegularPages "Section" "in" (slice "mf2" "events")) "Params.deleted" false }}
+      {
+        "type": [
+          {{ with .Params.h }}
+            {{ jsonify . }}
+          {{ else }}
+            {{ if eq .Params.Kind "articles" }}
+              "h-entry"
+            {{ else if eq .Params.Kind "events" }}
+              "h-event"
+            {{ end }}
+          {{ end }}
+        ],
+        "properties": {
+          {{ range $k, $v := .Params.Properties }}
+            {{ jsonify $k }}: {{ jsonify $v }},
+          {{ end }}
+          "uid": ["{{ printf "%s%s" $.Site.Params.LiveSiteUrl .Permalink }}"],
+          "url": ["{{ printf "%s%s" $.Site.Params.LiveSiteUrl .Permalink }}"]
+        }
+      },
+    {{ end }}
+      {}
+  ]
+}

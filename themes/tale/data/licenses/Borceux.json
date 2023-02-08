@@ -1,0 +1,12 @@
+{
+  "reference": "./Borceux.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Borceux.json",
+  "referenceNumber": "303",
+  "name": "Borceux license",
+  "licenseId": "Borceux",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Borceux"
+  ],
+  "isOsiApproved": false
+}

@@ -1,0 +1,9 @@
+{{ partialCached "mf2/property/content.html" . .Params.Properties }}
+
+{{ with $.Params.Properties.Photo }}
+  <p class="photos">
+    {{ range . }}
+    <img class="u-photo" src="{{ .photo }}" alt="{{ .alt }}" title="{{ .alt }}" loading=lazy />
+    {{ end }}
+  </p>
+{{ end }}

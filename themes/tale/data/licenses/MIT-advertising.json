@@ -1,0 +1,12 @@
+{
+  "reference": "./MIT-advertising.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/MIT-advertising.json",
+  "referenceNumber": "7",
+  "name": "Enlightenment License (e16)",
+  "licenseId": "MIT-advertising",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/MIT_With_Advertising"
+  ],
+  "isOsiApproved": false
+}

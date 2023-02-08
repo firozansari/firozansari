@@ -1,0 +1,12 @@
+{
+  "reference": "./Glulxe.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Glulxe.json",
+  "referenceNumber": "88",
+  "name": "Glulxe License",
+  "licenseId": "Glulxe",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Glulxe"
+  ],
+  "isOsiApproved": false
+}

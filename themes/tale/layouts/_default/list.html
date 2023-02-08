@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<main class="h-feed">
+	<h1><a class="p-name u-url" href="{{ .Permalink }}">{{ strings.FirstUpper .Data.Singular }} {{ .Title }}</a></h1>
+	<div class="catalogue">
+		{{ range (.Paginate (where .Pages "Params.deleted" false)).Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+	</div>
+
+	{{ partialCached "pagination.html" . .Paginator }}
+</main>
+
+{{ end }}

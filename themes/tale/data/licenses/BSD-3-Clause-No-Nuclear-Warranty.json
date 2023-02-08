@@ -1,0 +1,12 @@
+{
+  "reference": "./BSD-3-Clause-No-Nuclear-Warranty.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/BSD-3-Clause-No-Nuclear-Warranty.json",
+  "referenceNumber": "42",
+  "name": "BSD 3-Clause No Nuclear Warranty",
+  "licenseId": "BSD-3-Clause-No-Nuclear-Warranty",
+  "seeAlso": [
+    "https://jogamp.org/git/?p=gluegen.git;a=blob_plain;f=LICENSE.txt"
+  ],
+  "isOsiApproved": false
+}

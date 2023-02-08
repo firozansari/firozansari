@@ -1,0 +1,12 @@
+{
+  "reference": "./BSD-3-Clause-LBNL.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/BSD-3-Clause-LBNL.json",
+  "referenceNumber": "327",
+  "name": "Lawrence Berkeley National Labs BSD variant license",
+  "licenseId": "BSD-3-Clause-LBNL",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/LBNLBSD"
+  ],
+  "isOsiApproved": false
+}

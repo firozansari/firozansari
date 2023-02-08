@@ -1,0 +1,13 @@
+{
+  "reference": "./Nunit.html",
+  "isDeprecatedLicenseId": true,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/Nunit.json",
+  "referenceNumber": "280",
+  "name": "Nunit License",
+  "licenseId": "Nunit",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Nunit"
+  ],
+  "isOsiApproved": false
+}

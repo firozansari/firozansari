@@ -1,0 +1,12 @@
+{
+  "reference": "./AAL.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/AAL.json",
+  "referenceNumber": "20",
+  "name": "Attribution Assurance License",
+  "licenseId": "AAL",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/attribution"
+  ],
+  "isOsiApproved": true
+}

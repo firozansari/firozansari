@@ -1,0 +1,29 @@
+#webmentions {
+  a.reaction {
+    margin-right: 0;
+
+    img {
+      display: inline-block;
+      height: 32px;
+      margin: 0;
+      width: 32px;
+      border-radius: 25%;
+      margin-right: -1ex;
+    }
+  }
+
+  .comments {
+    li {
+      list-style: none;
+
+      img {
+        display: inline-block;
+        height: 32px;
+        margin: 0;
+        margin-right: 5px;
+        width: 32px;
+        border-radius: 25%;
+      }
+    }
+  }
+}

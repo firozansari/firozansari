@@ -1,0 +1,63 @@
+{{ with .Params.Properties.Content }}
+  {{ with index . 0 }}
+    {{ if .html }}
+      <div class="e-content">
+         {{ .html | safeHTML }}
+      </div>
+    {{ else }}
+      {{ $content := .value }}
+      {{ $twitterContent := .value }}
+
+      {{ $value := .value }}
+      {{ range findRE "@[a-zA-Z.-_]+@[a-zA-Z.-_]+" $value }}
+        {{ $fediverseUser := . }}
+        {{ $content = replace $content $fediverseUser "$_PLACEHOLDER_$" }}
+        {{ $twitterContent = replace $twitterContent $fediverseUser "$_PLACEHOLDER_$" }}
+
+        {{ range findRE "@[a-zA-Z.-_]+" $value }}
+          {{ $uid := (replace . "@" "") }}
+          {{ if $.Site.GetPage (printf "/contacts/%s.md" $uid) }}
+            {{ $p := $.Site.GetPage (printf "/contacts/%s.md" $uid) }}
+            {{ if index $p.Params.Properties "rel=twitter" }}
+              {{ $content = replace $content . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"%s\">%s</a></span>" (index $p.Params.Properties.url 0) (index $p.Params.Properties.name 0)) }}
+              {{ $twitterContent = replace $twitterContent . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"https://twitter.com/%s\">@%s</a></span>" (index (index $p.Params.Properties "rel=twitter") 0) (index (index $p.Params.Properties "rel=twitter") 0)) }}
+            {{ else }}
+              {{ $content = replace $content . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"%s\">%s</a></span>" (index $p.Params.Properties.url 0) (index $p.Params.Properties.name 0) ) }}
+              {{ $twitterContent = replace $twitterContent . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"%s\">%s</a></span>" (index $p.Params.Properties.url 0) (index $p.Params.Properties.url 0) ) }}
+            {{ end }}
+          {{ else if in $uid "." }}
+            {{ $url := printf "http://%s" $uid }}
+            {{ $content = replace $content . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"%s\">%s</a></span>" $url $url ) }}
+            {{ $twitterContent = replace $twitterContent . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"%s\">%s</a></span>" $url $url ) }}
+          {{ end }}
+        {{ end }}
+
+        {{ $content = replace $content "$_PLACEHOLDER_$" $fediverseUser }}
+        {{ $twitterContent = replace $twitterContent "$_PLACEHOLDER_$" $fediverseUser }}
+      {{ else }}
+        {{ range findRE "@[a-zA-Z.-_]+" $value }}
+          {{ $uid := (replace . "@" "") }}
+          {{ if $.Site.GetPage (printf "/contacts/%s.md" $uid) }}
+            {{ $p := $.Site.GetPage (printf "/contacts/%s.md" $uid) }}
+            {{ if index $p.Params.Properties "rel=twitter" }}
+              {{ $content = replace $content . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"%s\">%s</a></span>" (index $p.Params.Properties.url 0) (index $p.Params.Properties.name 0)) }}
+              {{ $twitterContent = replace $twitterContent . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"https://twitter.com/%s\">@%s</a></span>" (index (index $p.Params.Properties "rel=twitter") 0) (index (index $p.Params.Properties "rel=twitter") 0)) }}
+            {{ else }}
+              {{ $content = replace $content . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"%s\">%s</a></span>" (index $p.Params.Properties.url 0) (index $p.Params.Properties.name 0) ) }}
+              {{ $twitterContent = replace $twitterContent . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"%s\">%s</a></span>" (index $p.Params.Properties.url 0) (index $p.Params.Properties.url 0) ) }}
+            {{ end }}
+          {{ else if in $uid "." }}
+            {{ $url := printf "http://%s" $uid }}
+            {{ $content = replace $content . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"%s\">%s</a></span>" $url $url ) }}
+            {{ $twitterContent = replace $twitterContent . (printf "<span class=\"h-card\"><a class=\"u-url\" href=\"%s\">%s</a></span>" $url $url ) }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      <div class="e-content">
+        <p>{{ markdownify $content | safeHTML }}</p>
+      </div>
+      <aside class="p-bridgy-twitter-content">{{ markdownify $twitterContent | safeHTML }}</aside>
+    {{ end }}
+  {{ end }}
+{{ end }}

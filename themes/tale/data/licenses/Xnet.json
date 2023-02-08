@@ -1,0 +1,12 @@
+{
+  "reference": "./Xnet.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Xnet.json",
+  "referenceNumber": "374",
+  "name": "X.Net License",
+  "licenseId": "Xnet",
+  "seeAlso": [
+    "http://opensource.org/licenses/Xnet"
+  ],
+  "isOsiApproved": true
+}

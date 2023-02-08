@@ -1,0 +1,14 @@
+{
+  "reference": "./Apache-1.1.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/Apache-1.1.json",
+  "referenceNumber": "80",
+  "name": "Apache License 1.1",
+  "licenseId": "Apache-1.1",
+  "seeAlso": [
+    "http://apache.org/licenses/LICENSE-1.1",
+    "http://opensource.org/licenses/Apache-1.1"
+  ],
+  "isOsiApproved": true
+}

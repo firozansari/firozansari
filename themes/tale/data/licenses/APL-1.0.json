@@ -1,0 +1,12 @@
+{
+  "reference": "./APL-1.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/APL-1.0.json",
+  "referenceNumber": "245",
+  "name": "Adaptive Public License 1.0",
+  "licenseId": "APL-1.0",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/APL-1.0"
+  ],
+  "isOsiApproved": true
+}

@@ -1,0 +1,12 @@
+{
+  "reference": "./Artistic-1.0-Perl.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Artistic-1.0-Perl.json",
+  "referenceNumber": "363",
+  "name": "Artistic License 1.0 (Perl)",
+  "licenseId": "Artistic-1.0-Perl",
+  "seeAlso": [
+    "http://dev.perl.org/licenses/artistic.html"
+  ],
+  "isOsiApproved": true
+}

@@ -1,0 +1,13 @@
+{
+  "reference": "./APSL-2.0.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/APSL-2.0.json",
+  "referenceNumber": "103",
+  "name": "Apple Public Source License 2.0",
+  "licenseId": "APSL-2.0",
+  "seeAlso": [
+    "http://www.opensource.apple.com/license/apsl/"
+  ],
+  "isOsiApproved": true
+}

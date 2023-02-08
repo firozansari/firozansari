@@ -1,0 +1,13 @@
+{
+  "reference": "./PostgreSQL.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/PostgreSQL.json",
+  "referenceNumber": "240",
+  "name": "PostgreSQL License",
+  "licenseId": "PostgreSQL",
+  "seeAlso": [
+    "http://www.postgresql.org/about/licence",
+    "http://www.opensource.org/licenses/PostgreSQL"
+  ],
+  "isOsiApproved": true
+}

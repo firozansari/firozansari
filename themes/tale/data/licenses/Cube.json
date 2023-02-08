@@ -1,0 +1,12 @@
+{
+  "reference": "./Cube.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Cube.json",
+  "referenceNumber": "357",
+  "name": "Cube License",
+  "licenseId": "Cube",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Cube"
+  ],
+  "isOsiApproved": false
+}

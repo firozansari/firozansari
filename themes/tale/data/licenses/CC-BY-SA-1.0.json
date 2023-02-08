@@ -1,0 +1,12 @@
+{
+  "reference": "./CC-BY-SA-1.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/CC-BY-SA-1.0.json",
+  "referenceNumber": "313",
+  "name": "Creative Commons Attribution Share Alike 1.0 Generic",
+  "licenseId": "CC-BY-SA-1.0",
+  "seeAlso": [
+    "http://creativecommons.org/licenses/by-sa/1.0/legalcode"
+  ],
+  "isOsiApproved": false
+}

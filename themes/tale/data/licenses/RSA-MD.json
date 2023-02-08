@@ -1,0 +1,12 @@
+{
+  "reference": "./RSA-MD.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/RSA-MD.json",
+  "referenceNumber": "78",
+  "name": "RSA Message-Digest License ",
+  "licenseId": "RSA-MD",
+  "seeAlso": [
+    "http://www.faqs.org/rfcs/rfc1321.html"
+  ],
+  "isOsiApproved": false
+}

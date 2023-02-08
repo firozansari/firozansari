@@ -1,0 +1,6 @@
+{{ partial "mf2/property/content-field.html" . }}
+{{ if .Params.Properties.Content }} {{/* TODO: this is where the extra option comes in */}}
+  Quoted {{ partialCached "generic-cite.html" (slice . "repost-of" $.Site "quotation-of") (slice "repost-of" (index .Params.Properties "repost-of")) }}
+{{ else }}
+  Reposted {{ partialCached "generic-cite.html" (slice . "repost-of" $.Site) (slice "repost-of" (index .Params.Properties "repost-of")) }}
+{{ end }}

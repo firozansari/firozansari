@@ -1,0 +1,12 @@
+{
+  "reference": "./DOC.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/DOC.json",
+  "referenceNumber": "153",
+  "name": "DOC License",
+  "licenseId": "DOC",
+  "seeAlso": [
+    "http://www.cs.wustl.edu/~schmidt/ACE-copying.html"
+  ],
+  "isOsiApproved": false
+}

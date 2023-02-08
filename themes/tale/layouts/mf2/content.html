@@ -1,0 +1,17 @@
+{{ $partial := printf "mf2/%s.html" (.Params.Kind) }}
+{{ if templates.Exists (printf "partials/%s" $partial) }}
+{{ partialCached $partial . . }}
+{{ end }}
+
+<p class="post-meta">
+	<a class="u-uid u-url" href="{{ .Permalink }}">
+		<time datetime="{{ index (.Params.Properties.Published) 0 }}" class="dt-published">{{ dateFormat "Mon, 02 Jan 2006 15:04" (index (.Params.Properties.Published) 0) }}</time>
+	</a> by {{ partialCached "inline-hcard.html" . }}.
+
+	{{ if .Params.Properties.Category }}
+		<i class="fa fa-tags"></i>
+		{{ range .Params.Properties.Category }}
+		<a href="/tags/{{ . }}/">#<span class="p-category">{{ . }}</span></a>
+		{{- end -}}.
+	{{ end }}
+</p>

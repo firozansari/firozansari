@@ -1,0 +1,12 @@
+{
+  "reference": "./Info-ZIP.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Info-ZIP.json",
+  "referenceNumber": "99",
+  "name": "Info-ZIP License",
+  "licenseId": "Info-ZIP",
+  "seeAlso": [
+    "http://www.info-zip.org/license.html"
+  ],
+  "isOsiApproved": false
+}

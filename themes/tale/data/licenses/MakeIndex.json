@@ -1,0 +1,12 @@
+{
+  "reference": "./MakeIndex.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/MakeIndex.json",
+  "referenceNumber": "180",
+  "name": "MakeIndex License",
+  "licenseId": "MakeIndex",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/MakeIndex"
+  ],
+  "isOsiApproved": false
+}

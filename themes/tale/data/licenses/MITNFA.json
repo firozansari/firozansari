@@ -1,0 +1,12 @@
+{
+  "reference": "./MITNFA.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/MITNFA.json",
+  "referenceNumber": "286",
+  "name": "MIT +no-false-attribs license",
+  "licenseId": "MITNFA",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/MITNFA"
+  ],
+  "isOsiApproved": false
+}

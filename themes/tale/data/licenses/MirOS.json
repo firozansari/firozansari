@@ -1,0 +1,12 @@
+{
+  "reference": "./MirOS.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/MirOS.json",
+  "referenceNumber": "291",
+  "name": "MirOS License",
+  "licenseId": "MirOS",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/MirOS"
+  ],
+  "isOsiApproved": true
+}

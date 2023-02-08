@@ -1,0 +1,15 @@
+<div class="pagination">
+  <p>You're currently viewing page <span>{{ .Paginator.PageNumber }}</span> of <span>{{ .Paginator.TotalPages }}</span>, of {{.Paginator.TotalNumberOfElements }} posts.</p>
+
+  <p>
+    {{ if .Paginator.HasPrev }}
+    <a rel="prev" href="{{ .Paginator.Prev.URL }}" class="left arrow">Go to the previous page</a>
+    {{ end }}
+  </p>
+
+  <p>
+    {{ if .Paginator.HasNext }}
+      <a rel="next" href="{{ .Paginator.Next.URL }}" class="right arrow">Go to the next page</a>
+    {{ end }}
+  </p>
+</div>

@@ -1,0 +1,12 @@
+{
+  "reference": "./Newsletr.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Newsletr.json",
+  "referenceNumber": "271",
+  "name": "Newsletr License",
+  "licenseId": "Newsletr",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Newsletr"
+  ],
+  "isOsiApproved": false
+}

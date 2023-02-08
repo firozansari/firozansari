@@ -1,0 +1,70 @@
+<a href="https://fed.brid.gy" aria-hidden="true"></a>
+
+{{ with .Params.syndication }}
+<div id="syndication-targets">
+	<p>Also on:
+		{{ range . }}
+			{{ $url := urls.Parse . }}
+			{{ if eq "twitter.com" $url.Host }}
+				<a href="{{ . }}" class="u-syndication"><i class="fa fa-twitter" title="View this post on Twitter.com"></i></a>
+			{{ else if eq "github.com" $url.Host }}
+				<a href="{{ . }}" class="u-syndication"><i class="fa fa-github" title="View this post on GitHub.com"></i></a>
+			{{ else if eq "lobste.rs" $url.Host }}
+				<a href="{{ . }}" class="u-syndication">
+					<img src="https://raw.githubusercontent.com/lobsters/lobsters/master/app/assets/images/logo-color.svg" title="Lobste.rs logo" alt="Lobste.rs logo" loading=lazy />
+				</a>
+			{{ else if or (eq "meetup.com" $url.Host) (eq "www.meetup.com" $url.Host) }}
+				<a href="{{ . }}" class="u-syndication"><i class="fa fa-meetup" title="View this post on Meetup.com"></i></a>
+			{{ else if eq "news.indieweb.org" $url.Host }}
+				<a href="{{ . }}" class="u-syndication">
+					<img src="https://indieweb.org/img/indiewebcamp.svg" title="IndieWeb News" alt="IndieWebCamp logo" loading=lazy />
+				</a>
+			{{ else if eq "news.ycombinator.com" $url.Host }}
+				<a href="{{ . }}" class="u-syndication"><i class="fa fa-hacker-news" title="View this post on Hacker News"></i></a>
+			{{ else if eq "indieweb.xyz" $url.Host }}
+				<a href="{{ . }}" class="u-syndication">
+					<img src="https://indieweb.xyz/images/xyz.png" title="IndieWeb.xyz" alt="IndieWeb.xyz logo" loading=lazy />
+				</a>
+			{{ else if eq "brid.gy" $url.Host }}
+				<a href="{{ . }}" class="u-syndication"></a>
+			{{ else }}
+				<a href="{{ . }}" class="u-syndication">{{ $url.Host }}</a>
+			{{ end }}
+		{{ end }}
+	</p>
+</div>
+{{ end }}
+{{ with .Params.Properties.syndication }}
+<div id="syndication-targets">
+	<p>Also on:
+		{{ range . }}
+			{{ $url := urls.Parse . }}
+			{{ if eq "twitter.com" $url.Host }}
+				<a href="{{ . }}" class="u-syndication"><i class="fa fa-twitter" title="View this post on Twitter.com"></i></a>
+			{{ else if eq "github.com" $url.Host }}
+				<a href="{{ . }}" class="u-syndication"><i class="fa fa-github" title="View this post on GitHub.com"></i></a>
+			{{ else if eq "lobste.rs" $url.Host }}
+				<a href="{{ . }}" class="u-syndication">
+					<img src="https://raw.githubusercontent.com/lobsters/lobsters/master/app/assets/images/logo-color.svg" title="Lobste.rs logo" alt="Lobste.rs logo" loading=lazy />
+				</a>
+			{{ else if or (eq "meetup.com" $url.Host) (eq "www.meetup.com" $url.Host) }}
+				<a href="{{ . }}" class="u-syndication"><i class="fa fa-meetup" title="View this post on Meetup.com"></i></a>
+			{{ else if eq "news.indieweb.org" $url.Host }}
+				<a href="{{ . }}" class="u-syndication">
+					<img src="https://indieweb.org/img/indiewebcamp.svg" title="IndieWeb News" alt="IndieWebCamp logo" loading=lazy />
+				</a>
+			{{ else if eq "news.ycombinator.com" $url.Host }}
+				<a href="{{ . }}" class="u-syndication"><i class="fa fa-hacker-news" title="View this post on Hacker News"></i></a>
+			{{ else if eq "indieweb.xyz" $url.Host }}
+				<a href="{{ . }}" class="u-syndication">
+					<img src="https://indieweb.xyz/images/xyz.png" title="IndieWeb.xyz" alt="IndieWeb.xyz logo" loading=lazy />
+				</a>
+			{{ else if eq "brid.gy" $url.Host }}
+				<a href="{{ . }}" class="u-syndication"></a>
+			{{ else }}
+				<a href="{{ . }}" class="u-syndication">{{ $url.Host }}</a>
+			{{ end }}
+		{{ end }}
+	</p>
+</div>
+{{ end }}

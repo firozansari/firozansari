@@ -1,0 +1,12 @@
+{
+  "reference": "./TCP-wrappers.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/TCP-wrappers.json",
+  "referenceNumber": "266",
+  "name": "TCP Wrappers License",
+  "licenseId": "TCP-wrappers",
+  "seeAlso": [
+    "http://rc.quest.com/topics/openssh/license.php#tcpwrappers"
+  ],
+  "isOsiApproved": false
+}

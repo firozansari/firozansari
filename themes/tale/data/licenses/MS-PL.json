@@ -1,0 +1,14 @@
+{
+  "reference": "./MS-PL.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/MS-PL.json",
+  "referenceNumber": "326",
+  "name": "Microsoft Public License",
+  "licenseId": "MS-PL",
+  "seeAlso": [
+    "http://www.microsoft.com/opensource/licenses.mspx",
+    "http://www.opensource.org/licenses/MS-PL"
+  ],
+  "isOsiApproved": true
+}

@@ -1,0 +1,7 @@
+.support-me {
+	&::before {
+		@extend %divider;
+	}
+	color: #fe8019;
+}
+

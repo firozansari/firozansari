@@ -1,0 +1,12 @@
+{
+  "reference": "./Dotseqn.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Dotseqn.json",
+  "referenceNumber": "376",
+  "name": "Dotseqn License",
+  "licenseId": "Dotseqn",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Dotseqn"
+  ],
+  "isOsiApproved": false
+}

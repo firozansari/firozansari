@@ -1,0 +1,12 @@
+{
+  "reference": "./LPL-1.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/LPL-1.0.json",
+  "referenceNumber": "85",
+  "name": "Lucent Public License Version 1.0",
+  "licenseId": "LPL-1.0",
+  "seeAlso": [
+    "http://opensource.org/licenses/LPL-1.0"
+  ],
+  "isOsiApproved": true
+}

@@ -1,0 +1,48 @@
+.h-entry {
+	p {
+		text-align: justify;
+	}
+
+	h1.p-name,
+	strong .p-name,
+	a.u-bookmark-of.url,
+	aside.u-bookmark-of a.url,
+	a.u-like-of.url,
+	aside.u-like-of a.url,
+	a.u-repost-of.url,
+	aside.u-repost-of a.url,
+	a.u-in-reply-to.url,
+	aside.u-in-reply-to a.url
+	{
+		font-size: 120%;
+		line-height: 30px;
+
+		color: #98971a;
+		border-bottom-color: #98971a;
+
+		&:hover {
+			color: #282828;
+			background-color: #98971a;
+
+			code {
+				color: #282828;
+			}
+		}
+	}
+
+	img.u-featured {
+		max-height: 200px;
+	}
+
+  .h-cite {
+    img.u-photo {
+      max-height: 200px;
+    }
+    details {
+      margin: 20px;
+    }
+    .p-uid {
+      display: none;
+    }
+  }
+}

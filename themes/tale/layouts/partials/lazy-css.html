@@ -1,0 +1,3 @@
+{{ $css := (resources.Get . | toCSS (dict "outputStyle" "compressed") | fingerprint) }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" media="none" onload="if(media!='all')media='all'" integrity="{{ $css.Data.Integrity }}">
+<noscript><link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}"></noscript>

@@ -1,0 +1,13 @@
+{
+  "reference": "./NPL-1.0.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/NPL-1.0.json",
+  "referenceNumber": "319",
+  "name": "Netscape Public License v1.0",
+  "licenseId": "NPL-1.0",
+  "seeAlso": [
+    "http://www.mozilla.org/MPL/NPL/1.0/"
+  ],
+  "isOsiApproved": false
+}

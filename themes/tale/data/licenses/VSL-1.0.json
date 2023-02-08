@@ -1,0 +1,12 @@
+{
+  "reference": "./VSL-1.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/VSL-1.0.json",
+  "referenceNumber": "173",
+  "name": "Vovida Software License v1.0",
+  "licenseId": "VSL-1.0",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/VSL-1.0"
+  ],
+  "isOsiApproved": true
+}

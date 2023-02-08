@@ -1,0 +1,13 @@
+{
+  "reference": "./HPND.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/HPND.json",
+  "referenceNumber": "257",
+  "name": "Historical Permission Notice and Disclaimer",
+  "licenseId": "HPND",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/HPND"
+  ],
+  "isOsiApproved": true
+}

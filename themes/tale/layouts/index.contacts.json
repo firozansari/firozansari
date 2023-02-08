@@ -1,0 +1,18 @@
+{
+  "contacts": [
+	{{ range where .Site.RegularPages "Section" "contacts" }}
+      {
+        "name": "{{ index .Params.Properties.name 0 }}",
+        "url": "{{ index .Params.Properties.url 0 }}",
+        "nickname": "{{ index .Params.Properties.nickname 0 }}",
+        "silos": {
+			{{ with index .Params.Properties "rel=twitter"}}
+			"twitter": "{{ index . 0 }}"
+			{{ end }}
+        },
+		"_internal_url": "{{ printf "%s%s" $.Site.Params.LiveSiteUrl .Permalink }}"
+      },
+    {{ end }}
+    {}
+  ]
+}

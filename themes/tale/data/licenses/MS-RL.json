@@ -1,0 +1,14 @@
+{
+  "reference": "./MS-RL.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/MS-RL.json",
+  "referenceNumber": "272",
+  "name": "Microsoft Reciprocal License",
+  "licenseId": "MS-RL",
+  "seeAlso": [
+    "http://www.microsoft.com/opensource/licenses.mspx",
+    "http://www.opensource.org/licenses/MS-RL"
+  ],
+  "isOsiApproved": true
+}

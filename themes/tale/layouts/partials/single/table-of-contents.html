@@ -1,0 +1,8 @@
+{{ if ne "" (replace .TableOfContents "<nav id=\"TableOfContents\"></nav>" "") }}
+<aside>
+	<details>
+		<summary>Table of Contents</summary>
+		{{ .TableOfContents }}
+	</details>
+</aside>
+{{ end }}

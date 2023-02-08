@@ -1,0 +1,12 @@
+{
+  "reference": "./Unicode-TOU.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Unicode-TOU.json",
+  "referenceNumber": "68",
+  "name": "Unicode Terms of Use",
+  "licenseId": "Unicode-TOU",
+  "seeAlso": [
+    "http://www.unicode.org/copyright.html"
+  ],
+  "isOsiApproved": false
+}

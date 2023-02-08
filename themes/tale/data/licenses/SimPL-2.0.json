@@ -1,0 +1,12 @@
+{
+  "reference": "./SimPL-2.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/SimPL-2.0.json",
+  "referenceNumber": "177",
+  "name": "Simple Public License 2.0",
+  "licenseId": "SimPL-2.0",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/SimPL-2.0"
+  ],
+  "isOsiApproved": true
+}

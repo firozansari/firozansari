@@ -1,0 +1,31 @@
+require 'spec_helper'
+
+describe 'ValidWebmentionEndpoint' do
+  let(:sut) { ValidWebmentionEndpoint.new }
+
+  context 'when nil' do
+    it 'throws' do
+      expect { sut.validate(nil)}.to raise_error(InvalidWebmentionEndpointError, 'Webmention endpoint is not https://webmention.io/www.firozansari.com/webmention')
+    end
+  end
+
+  context 'when empty' do
+    it 'throws' do
+      expect { sut.validate('')}.to raise_error(InvalidWebmentionEndpointError, 'Webmention endpoint is not https://webmention.io/www.firozansari.com/webmention')
+    end
+  end
+
+  context 'when different end of string ' do
+    it 'throws' do
+      expect { sut.validate('https://webmention.io/www.firozansari.com/webmentions')}.to raise_error(InvalidWebmentionEndpointError, 'Webmention endpoint is not https://webmention.io/www.firozansari.com/webmention')
+    end
+  end
+
+  context 'when valid' do
+    it 'does not throw' do
+      sut.validate('https://webmention.io/www.firozansari.com/webmention')
+
+      # no error
+    end
+  end
+end

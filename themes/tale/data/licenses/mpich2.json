@@ -1,0 +1,12 @@
+{
+  "reference": "./mpich2.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/mpich2.json",
+  "referenceNumber": "309",
+  "name": "mpich2 License",
+  "licenseId": "mpich2",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/MIT"
+  ],
+  "isOsiApproved": false
+}

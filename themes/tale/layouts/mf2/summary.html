@@ -1,0 +1,6 @@
+<article>
+	<div class="{{ .Params.h }} mf2">
+		{{ partialCached "kind.html" . .Params.kind }}
+		{{ .Render "content" }}
+	</div>
+</article>

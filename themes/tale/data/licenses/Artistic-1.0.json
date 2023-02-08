@@ -1,0 +1,12 @@
+{
+  "reference": "./Artistic-1.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Artistic-1.0.json",
+  "referenceNumber": "158",
+  "name": "Artistic License 1.0",
+  "licenseId": "Artistic-1.0",
+  "seeAlso": [
+    "http://opensource.org/licenses/Artistic-1.0"
+  ],
+  "isOsiApproved": true
+}

@@ -1,0 +1,13 @@
+{
+  "reference": "./SMLNJ.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/SMLNJ.json",
+  "referenceNumber": "288",
+  "name": "Standard ML of New Jersey License",
+  "licenseId": "SMLNJ",
+  "seeAlso": [
+    "https://www.smlnj.org/license.html"
+  ],
+  "isOsiApproved": false
+}

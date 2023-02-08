@@ -1,0 +1,13 @@
+{
+  "reference": "./GFDL-1.1-only.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/GFDL-1.1-only.json",
+  "referenceNumber": "97",
+  "name": "GNU Free Documentation License v1.1 only",
+  "licenseId": "GFDL-1.1-only",
+  "seeAlso": [
+    "http://www.gnu.org/licenses/old-licenses/fdl-1.1.txt"
+  ],
+  "isOsiApproved": false
+}

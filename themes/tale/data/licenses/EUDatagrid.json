@@ -1,0 +1,14 @@
+{
+  "reference": "./EUDatagrid.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/EUDatagrid.json",
+  "referenceNumber": "185",
+  "name": "EU DataGrid Software License",
+  "licenseId": "EUDatagrid",
+  "seeAlso": [
+    "http://eu-datagrid.web.cern.ch/eu-datagrid/license.html",
+    "http://www.opensource.org/licenses/EUDatagrid"
+  ],
+  "isOsiApproved": true
+}

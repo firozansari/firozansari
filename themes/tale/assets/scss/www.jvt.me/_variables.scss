@@ -1,0 +1,43 @@
+/* https://stackoverflow.com/a/38713737/2257038 */
+@function repeat($character, $n){
+	$c:"";
+	@for $i from 1 through $n {
+		$c: $c + $character;
+	}
+	@return $c;
+}
+
+%divider {
+	font-size: 1rem;
+	@media (min-width: 300px) {
+		content: repeat('=', 35);
+	}
+	@media (min-width: 400px) {
+		content: repeat('=', 45);
+	}
+	@media (min-width: 500px) {
+		content: repeat('=', 55);
+	}
+	@media (min-width: 600px) {
+		content: repeat('=', 65);
+	}
+	@media (min-width: 700px) {
+		content: repeat('=', 75);
+	}
+	@media (min-width: 800px) {
+		content: repeat('=', 85);
+	}
+	@media (min-width: 900px) {
+		content: repeat('=', 95);
+	}
+
+	color: #b0bec5;
+	display: block;
+
+}
+
+%divided {
+	&::after {
+		@extend %divider;
+	}
+}

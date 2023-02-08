@@ -1,0 +1,12 @@
+{
+  "reference": "./TOSL.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/TOSL.json",
+  "referenceNumber": "347",
+  "name": "Trusster Open Source License",
+  "licenseId": "TOSL",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/TOSL"
+  ],
+  "isOsiApproved": false
+}

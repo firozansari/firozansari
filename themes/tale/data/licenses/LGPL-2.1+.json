@@ -1,0 +1,14 @@
+{
+  "reference": "./LGPL-2.1+.html",
+  "isDeprecatedLicenseId": true,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/LGPL-2.1+.json",
+  "referenceNumber": "62",
+  "name": "GNU Library General Public License v2.1 or later",
+  "licenseId": "LGPL-2.1+",
+  "seeAlso": [
+    "http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html",
+    "http://www.opensource.org/licenses/LGPL-2.1"
+  ],
+  "isOsiApproved": true
+}

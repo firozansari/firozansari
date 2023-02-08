@@ -1,0 +1,12 @@
+{
+  "reference": "./CNRI-Python.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/CNRI-Python.json",
+  "referenceNumber": "43",
+  "name": "CNRI Python License",
+  "licenseId": "CNRI-Python",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/CNRI-Python"
+  ],
+  "isOsiApproved": true
+}

@@ -1,0 +1,12 @@
+{
+  "reference": "./CC-BY-NC-SA-2.5.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/CC-BY-NC-SA-2.5.json",
+  "referenceNumber": "60",
+  "name": "Creative Commons Attribution Non Commercial Share Alike 2.5 Generic",
+  "licenseId": "CC-BY-NC-SA-2.5",
+  "seeAlso": [
+    "http://creativecommons.org/licenses/by-nc-sa/2.5/legalcode"
+  ],
+  "isOsiApproved": false
+}

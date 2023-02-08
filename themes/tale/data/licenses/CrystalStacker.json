@@ -1,0 +1,12 @@
+{
+  "reference": "./CrystalStacker.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/CrystalStacker.json",
+  "referenceNumber": "161",
+  "name": "CrystalStacker License",
+  "licenseId": "CrystalStacker",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing:CrystalStacker?rd=Licensing/CrystalStacker"
+  ],
+  "isOsiApproved": false
+}

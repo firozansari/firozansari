@@ -1,0 +1,13 @@
+{
+  "reference": "./Ruby.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/Ruby.json",
+  "referenceNumber": "256",
+  "name": "Ruby License",
+  "licenseId": "Ruby",
+  "seeAlso": [
+    "http://www.ruby-lang.org/en/LICENSE.txt"
+  ],
+  "isOsiApproved": false
+}

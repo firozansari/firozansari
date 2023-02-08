@@ -1,0 +1,12 @@
+{
+  "reference": "./Libpng.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Libpng.json",
+  "referenceNumber": "96",
+  "name": "libpng License",
+  "licenseId": "Libpng",
+  "seeAlso": [
+    "http://www.libpng.org/pub/png/src/libpng-LICENSE.txt"
+  ],
+  "isOsiApproved": false
+}

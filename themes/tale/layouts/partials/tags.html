@@ -1,0 +1,5 @@
+<ul>
+	{{ range .Params.Tags }}
+	<li> <a href="/tags/{{ . }}/"><span class="p-category">{{ . }}</span></a></li>
+	{{ end }}
+</ul>

@@ -1,0 +1,55 @@
+{{- if (index .properties "uid") -}}
+{{- if hasPrefix (index (index .properties "uid") 0) "tag:twitter.com" -}}
+<details open>
+  <summary>Post details</summary>
+  <blockquote class="twitter-context">
+    {{- with .properties -}}
+      {{- with (index . "in-reply-to") -}}
+        {{- with index . 0 -}}
+          <p><i class="fa fa-reply"></i> <a class="u-in-reply-to" href="{{ . }}">{{ . }}</a></p>
+        {{- end -}}
+      {{- end -}}
+      {{- with .content -}}
+        {{- with (index . 0) -}}
+          {{- if reflect.IsMap . -}}
+            <span class="e-content">{{- safeHTML .html -}}</span>
+          {{- else -}}
+            <p class="p-content">{{- . -}}</p>
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- with .photo -}}
+        {{- range . -}}
+          {{- if reflect.IsMap . -}}
+            {{- safeHTML .html -}}
+            <img class="u-photo" src="{{ .photo }}" alt="{{ .alt }}" title="{{ .alt }}" loading=lazy />
+          {{- else -}}
+            <img class="u-photo" src="{{ . }}" alt="No alt tag provided on Twitter.com" title="No alt tag provided on Twitter.com" loading=lazy />
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- with .video -}}
+        {{- range . -}}
+        <video controls="controls" loop>
+          <source src="{{ . }}" type="video/mp4">
+        </video>
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- with .children -}}
+      {{- range . -}}
+        {{- if in .type "u-quotation-of" -}}
+          <div class="h-cite u-quotation-of">
+            {{- partialCached "embed-tweet-mf2.html" . . -}}
+          </div>
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- with .properties -}}
+      <p>{{- with (index .author 0).properties }} {{ index .name 0 }} (@{{ index .nickname 0 }}) {{- end -}} <a class="u-url" href="{{ index .url 0 }}">{{ dateFormat "Mon, 02 Jan 2006 15:04 MST" (index .published 0) -}}</a></p>
+    {{- end -}}
+  </blockquote>
+</details>
+{{- end -}}
+{{- end -}}

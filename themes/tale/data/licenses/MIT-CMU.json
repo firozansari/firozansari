@@ -1,0 +1,12 @@
+{
+  "reference": "./MIT-CMU.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/MIT-CMU.json",
+  "referenceNumber": "8",
+  "name": "CMU License",
+  "licenseId": "MIT-CMU",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing:MIT?rd=Licensing/MIT#CMU_Style"
+  ],
+  "isOsiApproved": false
+}

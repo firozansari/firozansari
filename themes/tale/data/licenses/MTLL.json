@@ -1,0 +1,12 @@
+{
+  "reference": "./MTLL.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/MTLL.json",
+  "referenceNumber": "174",
+  "name": "Matrix Template Library License",
+  "licenseId": "MTLL",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Matrix_Template_Library_License"
+  ],
+  "isOsiApproved": false
+}

@@ -1,0 +1,12 @@
+{
+  "reference": "./Barr.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Barr.json",
+  "referenceNumber": "323",
+  "name": "Barr License",
+  "licenseId": "Barr",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Barr"
+  ],
+  "isOsiApproved": false
+}

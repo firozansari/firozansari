@@ -1,0 +1,20 @@
+{{ $writtenKeys := slice }}
+{{ $u := ""	}}
+
+{{ $iterate := dict "bookmarks" (dict "kind" "bookmarks" "property" "bookmark-of") "likes" (dict "kind" "likes" "property" "like-of") "reposts" (dict "kind" "reposts" "property" "repost-of") "rsvps" (dict "kind" "rsvps" "property" "in-reply-to") }}
+
+{{ range $iterate }}
+	{{ $.Scratch.Set "kind" .kind }}
+	{{ $.Scratch.Set "property" .property }}
+	{{ range where (where $.Site.RegularPages "Params.kind" "in" (slice .kind)) "Params.deleted" false }}
+		{{ $u = (index (index .Params.Properties ($.Scratch.Get "property")) 0) }}
+		{{ $writtenKeys = $writtenKeys | append $u }}
+		{{ $.Scratch.Add $u (slice (dict "kind" ($.Scratch.Get "kind") "url" (printf "%s%s" .Site.Params.LiveSiteUrl .Permalink))) }}
+	{{ end }}
+{{ end }}
+
+{{ range $writtenKeys }}
+{{ $.Scratch.SetInMap "content" . ($.Scratch.Get .) }}
+{{ end }}
+
+{{ $.Scratch.Get "content" | jsonify }}

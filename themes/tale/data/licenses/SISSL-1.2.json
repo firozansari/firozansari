@@ -1,0 +1,12 @@
+{
+  "reference": "./SISSL-1.2.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/SISSL-1.2.json",
+  "referenceNumber": "6",
+  "name": "Sun Industry Standards Source License v1.2",
+  "licenseId": "SISSL-1.2",
+  "seeAlso": [
+    "http://gridscheduler.sourceforge.net/Gridengine_SISSL_license.html"
+  ],
+  "isOsiApproved": false
+}

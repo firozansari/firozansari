@@ -1,0 +1,173 @@
+{{ $page := index . 0 }}
+{{ $prop := index . 1 }}
+{{ $site := index . 2 }}
+{{ $class := $prop }}
+{{ if index . 3 }}
+  {{ $class = index . 3 }}
+{{ end }}
+
+{{ $properties := $page.Params.Properties }}
+{{ with index $page.Params.Properties $prop }}
+  {{ with index . 0 }}
+    {{- if reflect.IsMap . -}}
+      {{ with .properties }}
+        <span class="p-{{ $class }} h-cite">
+        {{ with index (index . "name") 0 }}
+        <span class="p-name">{{ . }}</span>
+        {{ end }}
+        by
+        {{ with index (index . "author") 0 }}
+        <span class="p-author">{{ . }}</span>
+        {{ end }}
+        {{ with index . "uid" }}
+          <span class=uid-container></span>(<span class="p-uid">{{ index . 0 }}</span>)</span>
+        {{ end }}
+      {{ end }}
+      </span>
+    {{ else }}
+      {{ $parsed := (urls.Parse . ) }}
+      {{ $propUrl := . }}
+      {{ with index $site.Data.cites $parsed.Host }}
+        {{ $path := $parsed.Path }}
+        {{ if eq 0 (len $path) }}
+          {{ $path = "_" }}
+        {{ else }}
+          {{ $path = replaceRE "[^a-zA-Z0-9-]" "_" $parsed.Path }}
+        {{ end }}
+        {{ with index . $path }}
+          {{ $isTwitter := false }}
+          {{- if (index .properties "uid") -}}
+            {{- if hasPrefix (index (index .properties "uid") 0) "tag:twitter.com" -}}
+              <span class="u-{{ $class }} h-cite">
+              {{ $isTwitter = true }}
+              {{ with .properties }}
+                <a class=u-url href="{{ index (index . "url") 0 }}">a post on Twitter</a>
+              {{ end }}
+              {{- partialCached "embed-tweet-mf2.html" . . -}}
+              </span>
+            {{- end -}}
+          {{- end -}}
+          {{- if not $isTwitter -}}
+            {{ with .properties }}
+              <span class="u-{{ $class }} h-cite">
+
+              {{ if index . "url" }}
+                <a class=u-url href="{{ index (index . "url") 0 }}">
+              {{ end }}
+              {{ if index . "name" }}
+                  <span class="p-name">{{ index (index . "name") 0 }}</span>
+              {{ else }}
+                <span class="p-name">a post on {{ $parsed.Host }}</span>
+              {{ end }}
+              {{ if index . "url" }}
+                </a>
+              {{ end }}
+
+              {{- with (index . "author") -}}
+              by&nbsp;
+                {{- range $i, $e := . -}}
+                {{- if $i -}} and {{ end -}}
+                  {{- if reflect.IsMap $e -}}
+                    {{- with .properties -}}
+                      <span class="p-author h-card">
+                        {{- if index . "url" -}}
+                          <a class=u-url href="{{- index (index . "url") 0 -}}">
+                        {{- end -}}
+                          <span class="p-name">{{- index (index . "name") 0 -}}</span>
+                        {{- if index . "url" -}}
+                          </a>
+                        {{- end -}}
+                      </span>&nbsp;
+                    {{- end -}}
+                  {{- else -}}
+                    <span class="p-author">{{- . -}}</span>
+                  {{- end -}}
+                {{- end -}}
+              {{- end -}}
+
+              <details open>
+                <summary>Post details</summary>
+
+                {{ if index . "summary" }}
+                  <blockquote class=p-summary>
+                    {{- index (index . "summary") 0 -}}
+                  </blockquote>
+                {{ end }}
+
+                {{ if and (index . "content") (not (index . "summary")) }}
+                  {{ with (index . "content") }}
+                    <blockquote class=p-summary>
+                    {{ with index . 0 }}
+                      {{- if reflect.IsMap . -}}
+                        {{ .value | truncate $site.Params.CiteTruncateWords }}
+                      {{- else -}}
+                        {{ . | truncate $site.Params.CiteTruncateWords }}
+                      {{- end -}}
+                    {{ end }}
+                    </blockquote>
+                  {{ end }}
+                {{ end }}
+
+                {{ if and (index . "description") (not (index . "summary")) }}
+                  {{ with (index . "description") }}
+                    <blockquote class=p-summary>
+                    {{ with index . 0 }}
+                      {{- if reflect.IsMap . -}}
+                        {{ .value | truncate $site.Params.CiteTruncateWords }}
+                      {{- else -}}
+                        {{ . | truncate $site.Params.CiteTruncateWords }}
+                      {{- end -}}
+                    {{ end }}
+                    </blockquote>
+                  {{ end }}
+                {{ end }}
+
+                {{ with (index . "featured") }}
+                  {{ with index . 0 }}
+                    {{- if reflect.IsMap . -}}
+                    <img class=u-featured src="{{ .value }}" alt="{{ .alt }}" loading=lazy />
+                    {{- else -}}
+                    <img class=u-featured src="{{ . }}" loading=lazy />
+                    {{- end -}}
+                  {{ end }}
+                {{ end }}
+
+                {{ if and (index . "photo") (not (index . "featured")) }}
+                  {{ with (index . "photo") }}
+                    {{ with index . 0 }}
+                      {{- if reflect.IsMap . -}}
+                      <img class=u-featured src="{{ .value }}" alt="{{ .alt }}" loading=lazy />
+                      {{- else -}}
+                      <img class=u-featured src="{{ . }}" loading=lazy />
+                      {{- end -}}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+
+                {{- with index . "uid" -}}
+                  <span class=uid-container>(<span class="p-uid">{{ index . 0 }}</span>)</span>
+                {{- end -}}
+
+                {{- with index . "start" -}}
+                  {{- with index . 0 -}}
+                  On <time class="dt-start" datetime="{{ index . }}">{{ dateFormat "Monday, Jan 2 2006" . }}</time>
+                  {{- end -}}
+                {{- end -}}
+                </span>
+              </details>
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          <span class="u-{{ $class }}">
+            <a href="{{ $propUrl }}">{{ $propUrl }}</a>
+          </span>.
+        {{ end }}
+      {{ else }}
+        <span class="u-{{ $class }}">
+          <a href="{{ $propUrl }}">{{ $propUrl }}</a>
+        </span>.
+      {{ end }}
+    {{ end }}
+  </p>
+  {{ end }}
+{{ end }}

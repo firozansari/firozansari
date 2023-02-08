@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<main>
+	<div class="catalogue h-feed">
+		{{ $pages := where .Site.RegularPages "Params.kind" "in" .Site.Params.ShowInMainFeed }}
+		{{ $items := (.Paginate $pages).Pages }}
+
+		{{ if eq 1 .Paginator.PageNumber }}
+		{{ partialCached "index/introduction.html" . }}
+		{{ end }}
+
+		<aside class="h-feed-description">
+			<p>Below you can find my <span class="p-name"><a href="{{ .Permalink }}" class="u-url">feed</a></span> (<a href="https://indieweb.org/h-feed">h-feed</a>), which is a subset of the content published here. If you would like a feed of all the content in my site, you may be looking for <a href="/all/">/all/</a>. If there's something in particular that you'd like to find, you may be looking for my <a href="/posts/">blog posts</a>, otherwise you can <a href="/search">search</a> for it.</p>
+		</aside>
+
+		{{ range where $items "Params.deleted" false }}
+			{{ .Render "summary" }}
+		{{ end }}
+
+		{{ partialCached "pagination.html" . .Paginator }}
+	</div>
+</main>
+
+{{ end }}

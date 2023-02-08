@@ -1,0 +1,7 @@
+.spoiler {
+	color: transparent;
+	border-bottom: grey 1px solid;
+	&:hover {
+		color: white;
+	}
+}

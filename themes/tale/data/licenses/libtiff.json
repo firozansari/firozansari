@@ -1,0 +1,12 @@
+{
+  "reference": "./libtiff.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/libtiff.json",
+  "referenceNumber": "213",
+  "name": "libtiff License",
+  "licenseId": "libtiff",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/libtiff"
+  ],
+  "isOsiApproved": false
+}

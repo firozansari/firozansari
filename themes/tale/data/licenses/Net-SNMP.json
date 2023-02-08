@@ -1,0 +1,12 @@
+{
+  "reference": "./Net-SNMP.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Net-SNMP.json",
+  "referenceNumber": "276",
+  "name": "Net-SNMP License",
+  "licenseId": "Net-SNMP",
+  "seeAlso": [
+    "http://net-snmp.sourceforge.net/about/license.html"
+  ],
+  "isOsiApproved": false
+}

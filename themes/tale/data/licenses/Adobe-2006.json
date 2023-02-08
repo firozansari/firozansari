@@ -1,0 +1,12 @@
+{
+  "reference": "./Adobe-2006.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Adobe-2006.json",
+  "referenceNumber": "277",
+  "name": "Adobe Systems Incorporated Source Code License Agreement",
+  "licenseId": "Adobe-2006",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/AdobeLicense"
+  ],
+  "isOsiApproved": false
+}

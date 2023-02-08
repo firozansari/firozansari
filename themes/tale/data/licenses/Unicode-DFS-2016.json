@@ -1,0 +1,12 @@
+{
+  "reference": "./Unicode-DFS-2016.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Unicode-DFS-2016.json",
+  "referenceNumber": "368",
+  "name": "Unicode License Agreement - Data Files and Software (2016)",
+  "licenseId": "Unicode-DFS-2016",
+  "seeAlso": [
+    "http://www.unicode.org/copyright.html"
+  ],
+  "isOsiApproved": false
+}

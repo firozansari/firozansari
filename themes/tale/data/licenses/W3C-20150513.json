@@ -1,0 +1,12 @@
+{
+  "reference": "./W3C-20150513.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/W3C-20150513.json",
+  "referenceNumber": "49",
+  "name": "W3C Software Notice and Document License (2015-05-13)",
+  "licenseId": "W3C-20150513",
+  "seeAlso": [
+    "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"
+  ],
+  "isOsiApproved": false
+}

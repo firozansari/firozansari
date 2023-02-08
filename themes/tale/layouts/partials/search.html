@@ -1,0 +1,81 @@
+<p>Using the following search box, <input type="text" id="search" placeholder="Loading data.." disabled />, your search results will appear below:</p>
+
+<noscript>Unfortunately this search will only work with Javascript enabled - very sorry!</noscript>
+
+<ul id="search-results">
+	<li>No search results found.</li>
+</ul>
+
+<script src="/js/lunr.js"></script>
+<script>
+let lunrIndex;
+let feed = null;
+
+async function init() {
+  await fetchFeed();
+
+  lunrIndex = lunr(function() {
+    var searchBox = document.getElementById('search');
+    searchBox.disabled = false;
+    searchBox.placeholder = "Start typing here";
+
+    this.ref('url')
+    this.field('title')
+    this.field('summary')
+    this.field('content_text')
+    feed.items.forEach(function (doc) {
+      this.add(doc)
+    }, this)
+  });
+
+
+  document.getElementById('search').addEventListener('keyup', function() {
+    var searchResultsElem = document.getElementById('search-results');
+    // clear any existing results https://stackoverflow.com/a/3955238/2257038
+    while (searchResultsElem.firstChild) {
+      searchResultsElem.removeChild(searchResultsElem.firstChild);
+    }
+
+    var results = lunrIndex.search(this.value);
+    if(0 === results.length) {
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode("No results found"));
+      searchResultsElem.appendChild(li);
+    } else {
+      results.forEach(function(result) {
+        var li = document.createElement("li");
+        var a = document.createElement('a');
+
+        var title = postTitleFromUrl(result.ref);
+
+        a.appendChild(document.createTextNode(title))
+        a.href = result.ref;
+        li.appendChild(a);
+        searchResultsElem.appendChild(li);
+      });
+    }
+  });
+}
+
+function fetchFeed() {
+  return fetch('/search.json')
+    .then(res => res.json())
+    .then((theFeed) => {
+      feed = theFeed;
+      console.log("Feed re-fetched from /search.json");
+    })
+    .catch(err => { throw err });
+}
+
+function postTitleFromUrl(url) {
+  var title = 'Title for post not found';
+  feed.items.forEach(function(doc) {
+    if(url === doc.url) {
+      title = doc.title;
+    }
+  });
+  return title;
+}
+
+init();
+</script>

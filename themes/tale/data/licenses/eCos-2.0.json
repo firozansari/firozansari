@@ -1,0 +1,13 @@
+{
+  "reference": "./eCos-2.0.html",
+  "isDeprecatedLicenseId": true,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/eCos-2.0.json",
+  "referenceNumber": "320",
+  "name": "eCos license version 2.0",
+  "licenseId": "eCos-2.0",
+  "seeAlso": [
+    "http://www.gnu.org/licenses/ecos-license.html"
+  ],
+  "isOsiApproved": false
+}

@@ -1,0 +1,12 @@
+{
+  "reference": "./NPOSL-3.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/NPOSL-3.0.json",
+  "referenceNumber": "215",
+  "name": "Non-Profit Open Software License 3.0",
+  "licenseId": "NPOSL-3.0",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/NOSL3.0"
+  ],
+  "isOsiApproved": true
+}

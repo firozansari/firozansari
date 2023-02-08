@@ -1,0 +1,12 @@
+{
+  "reference": "./Rdisc.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Rdisc.json",
+  "referenceNumber": "287",
+  "name": "Rdisc License",
+  "licenseId": "Rdisc",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Rdisc_License"
+  ],
+  "isOsiApproved": false
+}

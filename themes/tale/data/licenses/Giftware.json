@@ -1,0 +1,12 @@
+{
+  "reference": "./Giftware.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Giftware.json",
+  "referenceNumber": "356",
+  "name": "Giftware License",
+  "licenseId": "Giftware",
+  "seeAlso": [
+    "http://liballeg.org/license.html#allegro-4-the-giftware-license"
+  ],
+  "isOsiApproved": false
+}

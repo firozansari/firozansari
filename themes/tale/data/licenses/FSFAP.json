@@ -1,0 +1,13 @@
+{
+  "reference": "./FSFAP.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/FSFAP.json",
+  "referenceNumber": "108",
+  "name": "FSF All Permissive License",
+  "licenseId": "FSFAP",
+  "seeAlso": [
+    "http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html"
+  ],
+  "isOsiApproved": false
+}

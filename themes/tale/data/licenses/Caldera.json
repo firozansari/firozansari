@@ -1,0 +1,12 @@
+{
+  "reference": "./Caldera.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Caldera.json",
+  "referenceNumber": "102",
+  "name": "Caldera License",
+  "licenseId": "Caldera",
+  "seeAlso": [
+    "http://www.lemis.com/grog/UNIX/ancient-source-all.pdf"
+  ],
+  "isOsiApproved": false
+}

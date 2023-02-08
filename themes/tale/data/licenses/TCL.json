@@ -1,0 +1,13 @@
+{
+  "reference": "./TCL.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/TCL.json",
+  "referenceNumber": "258",
+  "name": "TCL/TK License",
+  "licenseId": "TCL",
+  "seeAlso": [
+    "http://www.tcl.tk/software/tcltk/license.html",
+    "https://fedoraproject.org/wiki/Licensing/TCL"
+  ],
+  "isOsiApproved": false
+}

@@ -1,0 +1,12 @@
+{
+  "reference": "./Saxpath.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Saxpath.json",
+  "referenceNumber": "17",
+  "name": "Saxpath License",
+  "licenseId": "Saxpath",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Saxpath_License"
+  ],
+  "isOsiApproved": false
+}

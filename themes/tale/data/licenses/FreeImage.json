@@ -1,0 +1,12 @@
+{
+  "reference": "./FreeImage.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/FreeImage.json",
+  "referenceNumber": "269",
+  "name": "FreeImage Public License v1.0",
+  "licenseId": "FreeImage",
+  "seeAlso": [
+    "http://freeimage.sourceforge.net/freeimage-license.txt"
+  ],
+  "isOsiApproved": false
+}

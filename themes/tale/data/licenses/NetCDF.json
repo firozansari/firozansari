@@ -1,0 +1,12 @@
+{
+  "reference": "./NetCDF.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/NetCDF.json",
+  "referenceNumber": "44",
+  "name": "NetCDF license",
+  "licenseId": "NetCDF",
+  "seeAlso": [
+    "http://www.unidata.ucar.edu/software/netcdf/copyright.html"
+  ],
+  "isOsiApproved": false
+}

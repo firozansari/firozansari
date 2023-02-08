@@ -1,0 +1,17 @@
+{{- if eq .Kind "page" -}}
+	{{- with (index .Params.Properties "name") -}}
+		{{- index . 0 -}}
+	{{- else -}}
+		{{- if eq "rsvps" .Params.Kind -}}
+			RSVP {{- index .Params.Properties.Rsvp 0 }} to {{ index (index .Params.Properties "in-reply-to") 0 }}
+		{{- else if eq "steps" .Params.Kind -}}
+			{{ with .Params.Properties }}
+				Step count for {{ dateFormat "Monday, Jan 2 2006" (index (index . "start") 0) }}
+			{{ end }}
+		{{- else -}}
+			{{- .Permalink -}}
+		{{- end -}}
+	{{- end -}}
+	{{- else -}}
+		{{- .Title -}}
+{{- end -}}

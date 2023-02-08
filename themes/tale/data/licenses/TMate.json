@@ -1,0 +1,12 @@
+{
+  "reference": "./TMate.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/TMate.json",
+  "referenceNumber": "246",
+  "name": "TMate Open Source License",
+  "licenseId": "TMate",
+  "seeAlso": [
+    "http://svnkit.com/license.html"
+  ],
+  "isOsiApproved": false
+}

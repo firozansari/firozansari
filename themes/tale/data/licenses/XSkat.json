@@ -1,0 +1,12 @@
+{
+  "reference": "./XSkat.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/XSkat.json",
+  "referenceNumber": "91",
+  "name": "XSkat License",
+  "licenseId": "XSkat",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/XSkat_License"
+  ],
+  "isOsiApproved": false
+}

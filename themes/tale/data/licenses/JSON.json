@@ -1,0 +1,12 @@
+{
+  "reference": "./JSON.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/JSON.json",
+  "referenceNumber": "358",
+  "name": "JSON License",
+  "licenseId": "JSON",
+  "seeAlso": [
+    "http://www.json.org/license.html"
+  ],
+  "isOsiApproved": false
+}

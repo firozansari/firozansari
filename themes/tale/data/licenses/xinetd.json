@@ -1,0 +1,13 @@
+{
+  "reference": "./xinetd.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/xinetd.json",
+  "referenceNumber": "139",
+  "name": "xinetd License",
+  "licenseId": "xinetd",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Xinetd_License"
+  ],
+  "isOsiApproved": false
+}

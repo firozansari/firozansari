@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{{ if (ne .Params.deleted true) }}
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+    <head>
+      {{ partialCached "generic-head.html" . }}
+      {{ partialCached "head.html" . . }}
+    </head>
+    <body class="hack gruvbox-dark">
+        <div class="container">
+            {{ partialCached "header.html" . }}
+            {{ block "main" . }}{{ end }}
+            {{ partialCached "footer.html" . .GitInfo }}
+            {{ partialCached "scripts.html" . .Permalink }}
+        </div>
+    </body>
+</html>
+{{ else }}
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+    <head>
+        <meta http-equiv="refresh" content="0; url=/gone.html">
+    </head>
+</html>
+{{ end }}

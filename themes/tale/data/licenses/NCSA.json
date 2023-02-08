@@ -1,0 +1,14 @@
+{
+  "reference": "./NCSA.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/NCSA.json",
+  "referenceNumber": "56",
+  "name": "University of Illinois/NCSA Open Source License",
+  "licenseId": "NCSA",
+  "seeAlso": [
+    "http://otm.illinois.edu/uiuc_openSource",
+    "http://www.opensource.org/licenses/NCSA"
+  ],
+  "isOsiApproved": true
+}

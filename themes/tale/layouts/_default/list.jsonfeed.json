@@ -1,0 +1,38 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "{{ .Site.Title }}",
+    "home_page_url": "{{ .Site.Params.LiveSiteUrl }}",
+    "feed_url": "{{ .Site.Params.LiveSiteUrl }}/feed.json",
+	"description": "{{ .Site.Params.description }}",
+	"author": {
+		"name": "{{ .Site.Params.author }}",
+		"url": "{{ .Site.Params.LiveSiteUrl }}",
+		"avatar": "{{ .Site.Params.LiveSiteUrl }}{{ .Site.Params.image }}"
+	},
+    "items": [
+		{{ range $i, $e := first .Site.Params.MaxJsonFeedItems (where (where .Site.RegularPages "Section" "not in" .Site.Params.IgnoreInFeeds) "Params.deleted" false) }}
+			{{ if $i }}, {{ end }}
+				{
+					"id": "{{ .Site.Params.LiveSiteUrl }}{{ .Permalink }}",
+					"url": "{{ .Site.Params.LiveSiteUrl }}{{ .Permalink }}",
+					"title": "{{- trim (.Render "title") "\n" -}}",
+					"content_text": {{ jsonify (.Render "plain") }},
+					"content_html": {{ jsonify (.Render "content") }},
+					"summary": "{{ .Description }}",
+					{{ $image := .Site.Params.Image }}
+					{{ if .Params.Image }}
+					{{ $image = .Params.Image }}
+					{{ end }}
+					{{ if not (hasPrefix $image "https://media.jvt.me") }}
+					{{ $image = printf "%s%s" $.Site.Params.LiveSiteUrl $image }}
+					{{ end }}
+					"image": "{{ $image }}",
+					"date_published": {{ dateFormat "2006-01-02T15:04:05-07:00" .Date | jsonify }},
+					{{- with .GitInfo -}}
+					"date_modified": {{ dateFormat "2006-01-02T15:04:05-07:00" .AuthorDate | jsonify }},
+					{{- end -}}
+					"tags": {{ with .Params.Tags }}{{ . | jsonify }} {{ else }}[]{{ end }}
+				}
+		{{ end }}
+    ]
+}

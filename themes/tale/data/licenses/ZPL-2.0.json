@@ -1,0 +1,14 @@
+{
+  "reference": "./ZPL-2.0.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/ZPL-2.0.json",
+  "referenceNumber": "74",
+  "name": "Zope Public License 2.0",
+  "licenseId": "ZPL-2.0",
+  "seeAlso": [
+    "http://old.zope.org/Resources/License/ZPL-2.0",
+    "http://opensource.org/licenses/ZPL-2.0"
+  ],
+  "isOsiApproved": true
+}

@@ -1,0 +1,14 @@
+{
+  "reference": "./LGPL-3.0-only.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/LGPL-3.0-only.json",
+  "referenceNumber": "247",
+  "name": "GNU Lesser General Public License v3.0 only",
+  "licenseId": "LGPL-3.0-only",
+  "seeAlso": [
+    "http://www.gnu.org/licenses/lgpl-3.0-standalone.html",
+    "http://www.opensource.org/licenses/LGPL-3.0"
+  ],
+  "isOsiApproved": true
+}

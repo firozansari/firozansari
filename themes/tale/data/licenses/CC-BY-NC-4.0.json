@@ -1,0 +1,12 @@
+{
+  "reference": "./CC-BY-NC-4.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/CC-BY-NC-4.0.json",
+  "referenceNumber": "179",
+  "name": "Creative Commons Attribution Non Commercial 4.0 International",
+  "licenseId": "CC-BY-NC-4.0",
+  "seeAlso": [
+    "http://creativecommons.org/licenses/by-nc/4.0/legalcode"
+  ],
+  "isOsiApproved": false
+}

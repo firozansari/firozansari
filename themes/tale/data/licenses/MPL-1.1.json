@@ -1,0 +1,14 @@
+{
+  "reference": "./MPL-1.1.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/MPL-1.1.json",
+  "referenceNumber": "296",
+  "name": "Mozilla Public License 1.1",
+  "licenseId": "MPL-1.1",
+  "seeAlso": [
+    "http://www.mozilla.org/MPL/MPL-1.1.html",
+    "http://www.opensource.org/licenses/MPL-1.1"
+  ],
+  "isOsiApproved": true
+}

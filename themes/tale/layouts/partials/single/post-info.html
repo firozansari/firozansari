@@ -1,0 +1,8 @@
+<div class="post-info">
+    <time datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" .Lastmod }}">{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" .Lastmod }}</time>
+    <br />
+    <span class="post-license">
+		{{ $licenseProse := index $.Site.Data.licenses "CC-BY-NC-SA-4.0" }}
+        <a href="{{ index $licenseProse.seeAlso 0 }}"><i class="fa fa-book"></i> {{ $licenseProse.licenseId }}</a>
+    </span>
+</div>

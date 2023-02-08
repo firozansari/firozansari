@@ -1,0 +1,12 @@
+{
+  "reference": "./ADSL.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/ADSL.json",
+  "referenceNumber": "18",
+  "name": "Amazon Digital Services License",
+  "licenseId": "ADSL",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/AmazonDigitalServicesLicense"
+  ],
+  "isOsiApproved": false
+}

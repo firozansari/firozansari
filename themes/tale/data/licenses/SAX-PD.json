@@ -1,0 +1,12 @@
+{
+  "reference": "./SAX-PD.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/SAX-PD.json",
+  "referenceNumber": "134",
+  "name": "Sax Public Domain Notice",
+  "licenseId": "SAX-PD",
+  "seeAlso": [
+    "http://www.saxproject.org/copying.html"
+  ],
+  "isOsiApproved": false
+}

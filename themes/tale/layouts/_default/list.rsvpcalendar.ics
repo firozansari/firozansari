@@ -1,0 +1,63 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:www.jvt.me
+{{- range where .Site.RegularPages "Params.kind" "rsvps" -}}
+{{- if and (ne .Params.deleted true) (not (in .Params.Properties.Rsvp "no")) }}
+BEGIN:VEVENT
+UID:{{ printf "%s%s" .Site.Params.LiveSiteUrl .Permalink }}
+DTSTAMP:{{ dateFormat "20060102T150405" .Params.date }}Z
+	{{- $parsed := (urls.Parse (index (index .Params.Properties "in-reply-to") 0)) -}}
+	{{- with index $.Site.Data.cites $parsed.Host -}}
+		{{- $path := $parsed.Path -}}
+		{{- if eq 0 (len $path) -}}
+			{{- $path = "_" -}}
+		{{- else -}}
+			{{- $path = replaceRE "[^a-zA-Z0-9-]" "_" $parsed.Path -}}
+		{{- end -}}
+		{{- with index . $path -}}
+			{{- with index . "properties" }}
+SUMMARY:{{ index (index . "name") 0 }}
+DESCRIPTION:More details can be found at {{ index (index . "url") 0 }}
+DTSTART:{{ dateFormat "20060102T150405" (index (index . "start") 0) }}Z
+DTEND:{{ dateFormat "20060102T150405" (index (index . "end") 0) }}Z
+{{- with index . "location" }}
+LOCATION:
+	{{- with index . 0 -}}
+		{{- if reflect.IsMap . -}}
+			{{- if eq "h-card" (index .type 0) -}}
+				{{- with .properties -}}
+					{{- with .name -}}{{- index . 0 -}}, {{- end -}}
+					{{- with (index . "street-address") -}}{{- index . 0 -}}, {{- end -}}
+					{{- with .locality -}}{{- index . 0 -}}{{- end -}}
+					{{- with (index . "country-name") -}}, {{- index . 0 -}}{{- end -}}
+				{{- end -}}
+			{{- else if eq "h-adr" (index .type 0) -}}
+				{{- with .properties -}}
+					{{- with (index . "street-address") -}}{{- index . 0 -}}, {{ end -}}
+					{{- with .locality -}}{{- index . 0 -}}{{- end -}}
+					{{- with (index . "country-name") -}}, {{ index . 0 -}}{{- end -}}
+				{{- end -}}
+			{{- end -}}
+		{{- else -}}
+			{{- . -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
+			{{- end -}}
+		{{- end -}}
+	{{- end }}
+END:VEVENT
+{{- end -}}
+{{- end }}
+BEGIN:VEVENT
+UID:6860d87c-0029-4615-ac54-317b3869496b
+SEQUENCE:0
+DTSTAMP:20211015T000000Z
+DTSTART:20211014T125744Z
+DTEND:20221014T125720Z
+SUMMARY:*CALENDAR BEING DECOMISSIONED*
+DESCRIPTION:Please move to `https://rsvp-calendar.tanna.dev/feed?url=https
+ ://www.jvt.me/kind/rsvps/`\, as this will be decommissioned soon
+END:VEVENT
+END:VCALENDAR

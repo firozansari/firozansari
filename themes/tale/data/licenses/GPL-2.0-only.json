@@ -1,0 +1,14 @@
+{
+  "reference": "./GPL-2.0-only.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/GPL-2.0-only.json",
+  "referenceNumber": "226",
+  "name": "GNU General Public License v2.0 only",
+  "licenseId": "GPL-2.0-only",
+  "seeAlso": [
+    "http://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html",
+    "http://www.opensource.org/licenses/GPL-2.0"
+  ],
+  "isOsiApproved": true
+}

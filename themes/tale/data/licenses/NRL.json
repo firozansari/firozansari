@@ -1,0 +1,12 @@
+{
+  "reference": "./NRL.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/NRL.json",
+  "referenceNumber": "51",
+  "name": "NRL License",
+  "licenseId": "NRL",
+  "seeAlso": [
+    "http://web.mit.edu/network/isakmp/nrllicense.html"
+  ],
+  "isOsiApproved": false
+}

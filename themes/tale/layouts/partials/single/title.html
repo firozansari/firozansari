@@ -1,0 +1,7 @@
+{{ with .Title }}
+  <h1 class="p-name post-title">{{ . | markdownify }}</h1>
+  <div class="post-line"></div>
+{{ else }}
+  <h1 class="p-name post-title">{{ index .Params.Properties.name 0 | markdownify }}</h1>
+  <div class="post-line"></div>
+{{ end }}

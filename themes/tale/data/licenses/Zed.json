@@ -1,0 +1,12 @@
+{
+  "reference": "./Zed.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Zed.json",
+  "referenceNumber": "241",
+  "name": "Zed License",
+  "licenseId": "Zed",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Zed"
+  ],
+  "isOsiApproved": false
+}

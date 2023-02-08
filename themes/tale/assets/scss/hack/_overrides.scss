@@ -1,0 +1,45 @@
+.hack, .hack blockquote, .hack code, .hack em, .hack strong {
+	font-size: 1.2rem;
+	line-height: 22px;
+}
+
+.hack strong {
+	color: #fb4934;
+}
+
+.gruvbox-dark pre code {
+	color: #ebdbb2;
+}
+
+.hack ul {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+h1.nav-title {
+	color: #fe8019;
+	font-size: 150%;
+}
+
+p.kind {
+	a, a:visited {
+		color: #665c54;
+		border-color: #665c54;
+	}
+}
+
+.gruvbox-dark {
+	h1 a {
+		color: #98971a;
+		border-bottom-color: #98971a;
+
+		&:hover {
+			color: #282828;
+			background-color: #98971a;
+		}
+		&:visited {
+			color: #98971a;
+			border-bottom-color: #98971a;
+		}
+	}
+}

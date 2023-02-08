@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<main class="h-feed">
+	<h1><a class="p-name u-url" href="{{ .Permalink }}">{{ strings.FirstUpper .Data.Singular }} {{ .Title }}</a></h1>
+
+	{{ with .Params.Note }}
+	<p>{{ markdownify . }}</p>
+	{{ end }}
+
+	<p>This page has an ICS Calendar feed at <a href="{{ .Permalink }}index.ics">{{ .Permalink }}index.ics</a>.</p>
+
+	<div class="catalogue">
+		{{ if (eq $.Title "Events") }}
+			{{ range .Pages }}
+				{{ .Render "section-summary" }}
+			{{ end }}
+		{{ else }}
+			{{ range (sort (.Paginate .Pages).Pages "Slug" "desc") }}
+				{{ .Render "summary" }}
+			{{ end }}
+		{{ end }}
+	</div>
+
+	{{ template "_internal/pagination.html" . }}
+</main>
+
+{{ end }}

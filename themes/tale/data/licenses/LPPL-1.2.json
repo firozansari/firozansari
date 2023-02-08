@@ -1,0 +1,13 @@
+{
+  "reference": "./LPPL-1.2.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/LPPL-1.2.json",
+  "referenceNumber": "378",
+  "name": "LaTeX Project Public License v1.2",
+  "licenseId": "LPPL-1.2",
+  "seeAlso": [
+    "http://www.latex-project.org/lppl/lppl-1-2.txt"
+  ],
+  "isOsiApproved": false
+}

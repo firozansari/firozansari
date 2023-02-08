@@ -1,0 +1,12 @@
+{
+  "reference": "./Crossword.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Crossword.json",
+  "referenceNumber": "350",
+  "name": "Crossword License",
+  "licenseId": "Crossword",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Crossword"
+  ],
+  "isOsiApproved": false
+}

@@ -1,0 +1,12 @@
+{
+  "reference": "./MIT-enna.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/MIT-enna.json",
+  "referenceNumber": "23",
+  "name": "enna License",
+  "licenseId": "MIT-enna",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/MIT#enna"
+  ],
+  "isOsiApproved": false
+}

@@ -1,0 +1,13 @@
+{
+  "reference": "./gnuplot.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/gnuplot.json",
+  "referenceNumber": "9",
+  "name": "gnuplot License",
+  "licenseId": "gnuplot",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Gnuplot"
+  ],
+  "isOsiApproved": false
+}

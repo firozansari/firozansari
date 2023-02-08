@@ -1,0 +1,13 @@
+{
+  "reference": "./Intel.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/Intel.json",
+  "referenceNumber": "160",
+  "name": "Intel Open Source License",
+  "licenseId": "Intel",
+  "seeAlso": [
+    "http://opensource.org/licenses/Intel"
+  ],
+  "isOsiApproved": true
+}

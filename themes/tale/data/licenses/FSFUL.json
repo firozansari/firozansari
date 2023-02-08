@@ -1,0 +1,12 @@
+{
+  "reference": "./FSFUL.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/FSFUL.json",
+  "referenceNumber": "186",
+  "name": "FSF Unlimited License",
+  "licenseId": "FSFUL",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/FSF_Unlimited_License"
+  ],
+  "isOsiApproved": false
+}

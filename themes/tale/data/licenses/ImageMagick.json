@@ -1,0 +1,12 @@
+{
+  "reference": "./ImageMagick.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/ImageMagick.json",
+  "referenceNumber": "224",
+  "name": "ImageMagick License",
+  "licenseId": "ImageMagick",
+  "seeAlso": [
+    "http://www.imagemagick.org/script/license.php"
+  ],
+  "isOsiApproved": false
+}

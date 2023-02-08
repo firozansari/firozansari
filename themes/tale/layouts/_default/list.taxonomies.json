@@ -1,0 +1,11 @@
+{
+  {{ range $taxonomy, $map := .Site.Taxonomies }}
+    "{{ $taxonomy }}": [
+      {{ range $k, $v := $map }}
+        "{{ $k }}",
+      {{ end }}
+      ""
+    ],
+  {{ end }}
+  "": []
+}

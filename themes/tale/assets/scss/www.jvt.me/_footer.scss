@@ -1,0 +1,6 @@
+footer {
+	&::before {
+		margin-top: 20px;
+		@extend %divider;
+	}
+}

@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<main>
+	<div class="catalogue h-feed">
+		{{ $pages := .Site.RegularPages }}
+		{{ $items := (.Paginate $pages).Pages }}
+
+		<aside class="h-feed-description">Below you can find my <a href="https://indieweb.org/firehose">firehose</a> <span class="p-name"><a href="{{ .Permalink }}" class="u-url">feed</a></span> (<a href="https://indieweb.org/h-feed">h-feed</a>), which contains all content on my site. If there's something in particular that you'd like to find, you may be looking for my <a href="/posts/">blog posts</a>, otherwise you can <a href="/search">search</a> for it.</aside>
+
+		{{ range where $items "Params.deleted" false }}
+			{{ .Render "summary" }}
+		{{ end }}
+
+	{{ partialCached "pagination.html" . .Paginator }}
+	</div>
+</main>
+
+{{ end }}

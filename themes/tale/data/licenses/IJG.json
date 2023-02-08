@@ -1,0 +1,13 @@
+{
+  "reference": "./IJG.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/IJG.json",
+  "referenceNumber": "53",
+  "name": "Independent JPEG Group License",
+  "licenseId": "IJG",
+  "seeAlso": [
+    "http://dev.w3.org/cvsweb/Amaya/libjpeg/Attic/README?rev=1.2"
+  ],
+  "isOsiApproved": false
+}

@@ -1,0 +1,12 @@
+{
+  "reference": "./PDDL-1.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/PDDL-1.0.json",
+  "referenceNumber": "13",
+  "name": "ODC Public Domain Dedication & License 1.0",
+  "licenseId": "PDDL-1.0",
+  "seeAlso": [
+    "http://opendatacommons.org/licenses/pddl/1.0/"
+  ],
+  "isOsiApproved": false
+}

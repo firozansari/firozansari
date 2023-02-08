@@ -1,0 +1,13 @@
+{
+  "reference": "./OSL-1.1.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/OSL-1.1.json",
+  "referenceNumber": "324",
+  "name": "Open Software License 1.1",
+  "licenseId": "OSL-1.1",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/OSL1.1"
+  ],
+  "isOsiApproved": false
+}

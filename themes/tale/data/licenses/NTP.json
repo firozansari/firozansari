@@ -1,0 +1,12 @@
+{
+  "reference": "./NTP.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/NTP.json",
+  "referenceNumber": "254",
+  "name": "NTP License",
+  "licenseId": "NTP",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/NTP"
+  ],
+  "isOsiApproved": true
+}

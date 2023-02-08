@@ -1,0 +1,12 @@
+{
+  "reference": "./xpp.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/xpp.json",
+  "referenceNumber": "267",
+  "name": "XPP License",
+  "licenseId": "xpp",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/xpp"
+  ],
+  "isOsiApproved": false
+}

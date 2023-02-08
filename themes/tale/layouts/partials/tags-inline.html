@@ -1,0 +1,4 @@
+<i class="fa fa-tags"></i>
+{{ range .Params.Tags }}
+<a href="/tags/{{ . }}/"><span class="p-category">{{ . }}</span></a>
+{{ end }}

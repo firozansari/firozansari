@@ -1,0 +1,12 @@
+{
+  "reference": "./GPL-1.0-only.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/GPL-1.0-only.json",
+  "referenceNumber": "14",
+  "name": "GNU General Public License v1.0 only",
+  "licenseId": "GPL-1.0-only",
+  "seeAlso": [
+    "http://www.gnu.org/licenses/old-licenses/gpl-1.0-standalone.html"
+  ],
+  "isOsiApproved": false
+}

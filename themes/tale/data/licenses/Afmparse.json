@@ -1,0 +1,12 @@
+{
+  "reference": "./Afmparse.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Afmparse.json",
+  "referenceNumber": "40",
+  "name": "Afmparse License",
+  "licenseId": "Afmparse",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Afmparse"
+  ],
+  "isOsiApproved": false
+}

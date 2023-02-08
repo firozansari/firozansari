@@ -1,0 +1,14 @@
+{
+  "reference": "./W3C.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/W3C.json",
+  "referenceNumber": "339",
+  "name": "W3C Software Notice and License (2002-12-31)",
+  "licenseId": "W3C",
+  "seeAlso": [
+    "http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231.html",
+    "http://www.opensource.org/licenses/W3C"
+  ],
+  "isOsiApproved": true
+}

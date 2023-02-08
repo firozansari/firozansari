@@ -1,0 +1,13 @@
+{
+  "reference": "./Unlicense.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/Unlicense.json",
+  "referenceNumber": "285",
+  "name": "The Unlicense",
+  "licenseId": "Unlicense",
+  "seeAlso": [
+    "http://unlicense.org/"
+  ],
+  "isOsiApproved": false
+}

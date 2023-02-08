@@ -1,0 +1,106 @@
+{
+  {{ range $kind, $arr := .Site.Taxonomies.kind }}
+    {{ range $i, $p := where $arr "Params.deleted" false }}
+      {{ if not $i }}
+      {{ $.Scratch.Delete "days" }}
+      {{ $.Scratch.Delete "daysOfWeek" }}
+      {{ $.Scratch.Delete "hours" }}
+      {{ $.Scratch.Delete "months" }}
+
+      {{ range seq 0 23 }}
+        {{ $.Scratch.SetInMap "hours" (printf "%02d" . | string) 0 }}
+      {{ end }}
+
+      {{ range seq 1 31 }}
+        {{ $.Scratch.SetInMap "days" (printf "%02d" . | string) 0 }}
+      {{ end }}
+      {{ $.Scratch.SetInMap "daysOfWeek" "Mon" 0 }}
+      {{ $.Scratch.SetInMap "daysOfWeek" "Tue" 0 }}
+      {{ $.Scratch.SetInMap "daysOfWeek" "Wed" 0 }}
+      {{ $.Scratch.SetInMap "daysOfWeek" "Thu" 0 }}
+      {{ $.Scratch.SetInMap "daysOfWeek" "Fri" 0 }}
+      {{ $.Scratch.SetInMap "daysOfWeek" "Sat" 0 }}
+      {{ $.Scratch.SetInMap "daysOfWeek" "Sun" 0 }}
+
+      {{ range seq 1 12 }}
+        {{ $.Scratch.SetInMap "months" (printf "%02d" . | string) 0 }}
+      {{ end }}
+      {{ end }}
+
+      {{ $hourIndex := dateFormat "15" $p.Date | string }}
+      {{ $oldCount := index ($.Scratch.Get "hours") $hourIndex }}
+      {{ $.Scratch.SetInMap "hours" (string $hourIndex) (add $oldCount 1) }}
+
+      {{ $dayIndex := dateFormat "02" $p.Date | string }}
+      {{ $oldCount := index ($.Scratch.Get "days") (string $dayIndex) }}
+      {{ $.Scratch.SetInMap "days" (string $dayIndex) (add $oldCount 1) }}
+
+      {{ $dayOfWeekIndex := dateFormat "Mon" $p.Date }}
+      {{ $oldCount := index ($.Scratch.Get "daysOfWeek") (string $dayOfWeekIndex) }}
+      {{ $.Scratch.SetInMap "daysOfWeek" (string $dayOfWeekIndex) (add $oldCount 1) }}
+
+      {{ $monthIndex := dateFormat "01" $p.Date | string }}
+      {{ $oldCount := index ($.Scratch.Get "months") (string $monthIndex) }}
+      {{ $.Scratch.SetInMap "months" (string $monthIndex) (add $oldCount 1) }}
+
+        "{{ $kind }}": {
+          "daysOfWeek": {{ $.Scratch.Get "daysOfWeek" | sort |  jsonify }},
+          "days": {{ $.Scratch.Get "days" | sort |  jsonify }},
+          "hours": {{ $.Scratch.Get "hours" | sort |  jsonify }},
+          "months": {{ $.Scratch.Get "months" | sort |  jsonify }}
+        },
+    {{ end }}
+{{ end }}
+{{ $arr := index (index .Site.Taxonomies "tags") "blogumentation" }}
+{{ range $i, $p := where $arr "Params.deleted" false }}
+  {{ if not $i }}
+  {{ $.Scratch.Delete "days" }}
+  {{ $.Scratch.Delete "daysOfWeek" }}
+  {{ $.Scratch.Delete "hours" }}
+  {{ $.Scratch.Delete "months" }}
+
+  {{ range seq 0 23 }}
+	{{ $.Scratch.SetInMap "hours" (printf "%02d" . | string) 0 }}
+  {{ end }}
+
+  {{ range seq 1 31 }}
+	{{ $.Scratch.SetInMap "days" (printf "%02d" . | string) 0 }}
+  {{ end }}
+  {{ $.Scratch.SetInMap "daysOfWeek" "Mon" 0 }}
+  {{ $.Scratch.SetInMap "daysOfWeek" "Tue" 0 }}
+  {{ $.Scratch.SetInMap "daysOfWeek" "Wed" 0 }}
+  {{ $.Scratch.SetInMap "daysOfWeek" "Thu" 0 }}
+  {{ $.Scratch.SetInMap "daysOfWeek" "Fri" 0 }}
+  {{ $.Scratch.SetInMap "daysOfWeek" "Sat" 0 }}
+  {{ $.Scratch.SetInMap "daysOfWeek" "Sun" 0 }}
+
+  {{ range seq 1 12 }}
+	{{ $.Scratch.SetInMap "months" (printf "%02d" . | string) 0 }}
+  {{ end }}
+  {{ end }}
+
+  {{ $hourIndex := dateFormat "15" $p.Date | string }}
+  {{ $oldCount := index ($.Scratch.Get "hours") $hourIndex }}
+  {{ $.Scratch.SetInMap "hours" (string $hourIndex) (add $oldCount 1) }}
+
+  {{ $dayIndex := dateFormat "02" $p.Date | string }}
+  {{ $oldCount := index ($.Scratch.Get "days") (string $dayIndex) }}
+  {{ $.Scratch.SetInMap "days" (string $dayIndex) (add $oldCount 1) }}
+
+  {{ $dayOfWeekIndex := dateFormat "Mon" $p.Date }}
+  {{ $oldCount := index ($.Scratch.Get "daysOfWeek") (string $dayOfWeekIndex) }}
+  {{ $.Scratch.SetInMap "daysOfWeek" (string $dayOfWeekIndex) (add $oldCount 1) }}
+
+  {{ $monthIndex := dateFormat "01" $p.Date | string }}
+  {{ $oldCount := index ($.Scratch.Get "months") (string $monthIndex) }}
+  {{ $.Scratch.SetInMap "months" (string $monthIndex) (add $oldCount 1) }}
+
+	"blogumentation": {
+	  "daysOfWeek": {{ $.Scratch.Get "daysOfWeek" | sort |  jsonify }},
+	  "days": {{ $.Scratch.Get "days" | sort |  jsonify }},
+	  "hours": {{ $.Scratch.Get "hours" | sort |  jsonify }},
+	  "months": {{ $.Scratch.Get "months" | sort |  jsonify }}
+	},
+{{ end }}
+"": {}
+}

@@ -1,0 +1,9 @@
+{
+  "type" : [ "h-entry" ],
+  "properties" : {
+    "name" : [ "Frontend Practice" ],
+    "summary" : [ "Become a better frontend developer. Take your frontend skills to the next level by recreating real websites from real companies. The perfect type of practice for developers of all skill levels. Are you up for the challenge?[…]" ],
+    "url" : [ "https://www.frontendpractice.com/" ],
+    "published" : [ "2021-05-07T08:04:00+0100" ]
+  }
+}

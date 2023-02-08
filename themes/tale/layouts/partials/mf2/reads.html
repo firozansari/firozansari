@@ -1,0 +1,58 @@
+<div class="e-summary">
+{{ with index .Params.Properties "read-status" }}
+  {{ with index . 0 }}
+    <data class="p-read-status" value="{{ . }}">
+      {{ if eq "to-read" . }}
+			I want to read
+      {{ else if eq "reading" . }}
+			I am currently reading
+      {{ else if eq "finished" . }}
+			I have finished reading
+      {{ else }}
+			{{ . }}
+      {{ end }}
+    </data>
+  {{ end }}
+{{ end }}
+
+{{ partialCached "generic-cite.html" (slice . "read-of" $.Site) (slice "read-of" (index .Params.Properties "read-of")) }}
+</div>
+
+{{ if eq "finished" (index (index .Params.Properties "read-status") 0) }}
+<p class="p-bridgy-twitter-content">
+	#JustFinished
+	{{ with index (index .Params.Properties "read-of") 0 }}
+		{{- if reflect.IsMap . -}}
+			{{ with .properties }}{{ with index (index . "name") 0 }}{{ . }}{{ end }} by {{ with index (index . "author") 0 }} {{ . }} {{ end }}{{ end }}
+		{{ else }}
+      {{ $parsed := (urls.Parse . ) }}
+      {{ with index $.Site.Data.cites $parsed.Host }}
+        {{ $path := $parsed.Path }}
+        {{ if eq 0 (len $path) }}
+          {{ $path = "_" }}
+        {{ else }}
+          {{ $path = replaceRE "[^a-zA-Z0-9-]" "_" $parsed.Path }}
+        {{ end }}
+        {{ with index . $path }}
+          {{ with .properties }}
+
+          {{ index (index . "name") 0 }}
+          by
+          {{ with index (index . "author") 0 }}
+            {{ if reflect.IsMap . }}
+              {{ with .properties }}
+                {{ index (index . "name") 0 }}
+              {{ end }}
+              {{ else }}
+                {{ . }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ . }}
+      {{ end }}
+		{{ end }}
+	{{ end }}
+</p>
+{{ end }}

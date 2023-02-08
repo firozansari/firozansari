@@ -1,0 +1,12 @@
+{
+  "reference": "./ZPL-1.1.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/ZPL-1.1.json",
+  "referenceNumber": "346",
+  "name": "Zope Public License 1.1",
+  "licenseId": "ZPL-1.1",
+  "seeAlso": [
+    "http://old.zope.org/Resources/License/ZPL-1.1"
+  ],
+  "isOsiApproved": false
+}

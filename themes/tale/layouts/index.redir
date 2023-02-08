@@ -1,0 +1,13 @@
+https://firozansari.com/* {{.Site.Params.liveSiteUrl}}/:splat 301!
+https://firozansari.com/* {{.Site.Params.liveSiteUrl}}/:splat 301!
+{{ range $p := $.Site.RegularPages -}}
+{{ range .Aliases }}
+	{{ if strings.HasSuffix . "/" }}{{ . }}{{ else }}{{ . }}/{{ end }}	{{ $p.RelPermalink }} 301!
+{{ end -}}
+{{- end -}}
+{{ range .Site.Params.redirect }}
+	{{ .from }} {{ .to }} 301!
+{{ end }}
+{{ range where .Site.RegularPages "Params.deleted" true }}
+	{{ .RelPermalink }} /gone.html 410!
+{{ end }}

@@ -1,0 +1,12 @@
+{
+  "reference": "./ICU.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/ICU.json",
+  "referenceNumber": "187",
+  "name": "ICU License",
+  "licenseId": "ICU",
+  "seeAlso": [
+    "http://source.icu-project.org/repos/icu/icu/trunk/license.html"
+  ],
+  "isOsiApproved": false
+}

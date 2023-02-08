@@ -1,0 +1,21 @@
+.h-entry, .h-measure {
+  .p-author {
+    img.u-photo {
+      display: none;
+    }
+  }
+}
+
+.post-info {
+	text-align: center;
+
+	span {
+		font-style: italic;
+	}
+}
+
+.post-details {
+	&::before {
+		@extend %divider;
+	}
+}

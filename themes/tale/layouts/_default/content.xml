@@ -1,0 +1,5 @@
+{{ if (templates.Exists (printf "partials/content/%s.html" .Type)) }}
+	{{ partial (printf "content/%s.html" .Type) . }}
+{{ else }}
+	{{ .Content }}
+{{ end }}

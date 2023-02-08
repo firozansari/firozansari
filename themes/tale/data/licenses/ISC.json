@@ -1,0 +1,14 @@
+{
+  "reference": "./ISC.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/ISC.json",
+  "referenceNumber": "104",
+  "name": "ISC License",
+  "licenseId": "ISC",
+  "seeAlso": [
+    "https://www.isc.org/downloads/software-support-policy/isc-license/",
+    "http://www.opensource.org/licenses/ISC"
+  ],
+  "isOsiApproved": true
+}

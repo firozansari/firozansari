@@ -1,0 +1,13 @@
+{
+  "reference": "./StandardML-NJ.html",
+  "isDeprecatedLicenseId": true,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/StandardML-NJ.json",
+  "referenceNumber": "212",
+  "name": "Standard ML of New Jersey License",
+  "licenseId": "StandardML-NJ",
+  "seeAlso": [
+    "http://www.smlnj.org//license.html"
+  ],
+  "isOsiApproved": false
+}

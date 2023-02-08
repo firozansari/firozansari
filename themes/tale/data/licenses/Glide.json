@@ -1,0 +1,12 @@
+{
+  "reference": "./Glide.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Glide.json",
+  "referenceNumber": "360",
+  "name": "3dfx Glide License",
+  "licenseId": "Glide",
+  "seeAlso": [
+    "http://www.users.on.net/~triforce/glidexp/COPYING.txt"
+  ],
+  "isOsiApproved": false
+}

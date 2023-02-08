@@ -1,0 +1,45 @@
+		<footer>
+			<nav>
+				<p>Other links that may be of interest:</p>
+				<ul>
+					{{ range .Site.Menus.footer }}
+					<li>
+						<a href="{{ .URL }}">
+							{{ .Pre }}
+								{{ .Name }}
+							{{ .Post }}
+						</a>
+					</li>
+					{{ end }}
+				</ul>
+			</nav>
+
+			<span id="contact" name="contact">
+				<p>Want to get in touch?</p>
+				<ul>
+					<li>
+						<span class="monospace"><a rel="me" href="https://github.com/firozansari"><i class="fa fa-github" title="GitHub.com Profile"></i>&nbsp;@firozansari</a></span>
+					</li>
+					<li>
+						<span class="monospace">&nbsp;<code>@firoz@firozansari.com</code> on the Fediverse/Mastodon</span>
+					</li>
+					<li>
+						<span class="monospace"><a rel="me" href="https://twitter.com/firozansari"><i class="fa fa-twitter" title="Twitter.com Profile"></i>&nbsp;@firozansari</a></span>
+					</li>
+					<li>
+						<a rel="me" href="https://linkedin.com/in/firozansari"><i class="fa fa-linkedin" title="LinkedIn Profile"></i>&nbsp;Firoz Ansari</a>
+					</li>
+					<li>
+						<span class="monospace"><i class="fa fa-envelope" title="Email Address"></i>&nbsp;hi@firozansari.com</span>
+					</li>
+					<li>
+						<a rel="me" href="https://name.pn/firoz-ansari">My name and pronounciation</a>
+					</li>
+				</ul>
+			</span>
+			<span>
+				&copy; <time datetime="{{ now.Format "2006" }}">{{ now.Format "2006" }}</time> Firoz Ansari.
+				Post content and code snippets licensing is detailed on respective pages.
+				Site design based on <a href="https://github.com/egoist/hack">Hack.css</a>.
+			</span>
+		</footer>

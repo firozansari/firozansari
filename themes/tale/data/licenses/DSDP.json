@@ -1,0 +1,12 @@
+{
+  "reference": "./DSDP.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/DSDP.json",
+  "referenceNumber": "135",
+  "name": "DSDP License",
+  "licenseId": "DSDP",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/DSDP"
+  ],
+  "isOsiApproved": false
+}

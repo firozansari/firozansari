@@ -1,0 +1,12 @@
+{
+  "reference": "./Eurosym.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Eurosym.json",
+  "referenceNumber": "107",
+  "name": "Eurosym License",
+  "licenseId": "Eurosym",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Eurosym"
+  ],
+  "isOsiApproved": false
+}

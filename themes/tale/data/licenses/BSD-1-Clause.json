@@ -1,0 +1,12 @@
+{
+  "reference": "./BSD-1-Clause.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/BSD-1-Clause.json",
+  "referenceNumber": "345",
+  "name": "BSD 1-Clause License",
+  "licenseId": "BSD-1-Clause",
+  "seeAlso": [
+    "https://svnweb.freebsd.org/base/head/include/ifaddrs.h?revision=326823"
+  ],
+  "isOsiApproved": false
+}

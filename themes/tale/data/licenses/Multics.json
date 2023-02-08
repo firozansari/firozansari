@@ -1,0 +1,12 @@
+{
+  "reference": "./Multics.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Multics.json",
+  "referenceNumber": "61",
+  "name": "Multics License",
+  "licenseId": "Multics",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/Multics"
+  ],
+  "isOsiApproved": true
+}

@@ -1,0 +1,12 @@
+{
+  "reference": "./copyleft-next-0.3.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/copyleft-next-0.3.0.json",
+  "referenceNumber": "169",
+  "name": "copyleft-next 0.3.0",
+  "licenseId": "copyleft-next-0.3.0",
+  "seeAlso": [
+    "https://github.com/copyleft-next/copyleft-next/blob/master/Releases/copyleft-next-0.3.0"
+  ],
+  "isOsiApproved": false
+}

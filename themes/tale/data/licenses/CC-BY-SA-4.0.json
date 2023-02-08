@@ -1,0 +1,13 @@
+{
+  "reference": "./CC-BY-SA-4.0.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/CC-BY-SA-4.0.json",
+  "referenceNumber": "30",
+  "name": "Creative Commons Attribution Share Alike 4.0 International",
+  "licenseId": "CC-BY-SA-4.0",
+  "seeAlso": [
+    "http://creativecommons.org/licenses/by-sa/4.0/legalcode"
+  ],
+  "isOsiApproved": false
+}

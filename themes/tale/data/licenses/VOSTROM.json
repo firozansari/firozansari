@@ -1,0 +1,12 @@
+{
+  "reference": "./VOSTROM.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/VOSTROM.json",
+  "referenceNumber": "221",
+  "name": "VOSTROM Public License for Open Source",
+  "licenseId": "VOSTROM",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/VOSTROM"
+  ],
+  "isOsiApproved": false
+}

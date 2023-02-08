@@ -1,0 +1,5 @@
+{{ with .Title }}
+	{{ . }}
+{{ else }}
+    {{ index .Params.Properties.name 0 }}
+{{ end }}

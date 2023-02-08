@@ -1,0 +1,12 @@
+{
+  "reference": "./GL2PS.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/GL2PS.json",
+  "referenceNumber": "118",
+  "name": "GL2PS License",
+  "licenseId": "GL2PS",
+  "seeAlso": [
+    "http://www.geuz.org/gl2ps/COPYING.GL2PS"
+  ],
+  "isOsiApproved": false
+}

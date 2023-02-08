@@ -1,0 +1,13 @@
+{
+  "reference": "./OpenSSL.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/OpenSSL.json",
+  "referenceNumber": "242",
+  "name": "OpenSSL License",
+  "licenseId": "OpenSSL",
+  "seeAlso": [
+    "http://www.openssl.org/source/license.html"
+  ],
+  "isOsiApproved": false
+}

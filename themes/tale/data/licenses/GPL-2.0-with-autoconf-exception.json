@@ -1,0 +1,12 @@
+{
+  "reference": "./GPL-2.0-with-autoconf-exception.html",
+  "isDeprecatedLicenseId": true,
+  "detailsUrl": "http://spdx.org/licenses/GPL-2.0-with-autoconf-exception.json",
+  "referenceNumber": "343",
+  "name": "GNU General Public License v2.0 w/Autoconf exception",
+  "licenseId": "GPL-2.0-with-autoconf-exception",
+  "seeAlso": [
+    "http://ac-archive.sourceforge.net/doc/copyright.html"
+  ],
+  "isOsiApproved": false
+}

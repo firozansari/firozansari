@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<main>
+	<div class="post">
+		{{ partial "single/post-info.html" . }}
+		{{ partial "single/title.html" . }}
+		{{ partial "single/table-of-contents.html" . }}
+
+		{{ partial "single/header.html" . }}
+
+		<blockquote>
+			{{ .Params.Description }}
+		</blockquote>
+
+		{{ .Content }}
+
+		<div id="talk-events">
+			{{ if .Params.Events }}
+			<p>Events that this talk has/will be at:</p>
+			<ul>
+			{{ range .Params.Events }}
+				<li>
+					{{ if .url }}
+					<a href="{{ .url }}">{{ .name }}</a>
+					{{ else }}
+					{{ .name }}
+					{{ end }}
+					on {{ dateFormat "Monday, Jan 2, 2006" .date }} as a {{ .type }}.
+
+					{{ if .video }}
+					<a href="{{ .video }}">Recording of the talk</a>
+					{{ end }}
+					{{ with .slides }}
+					<a href="{{ .url }}">Slides licensed under the {{ .license }}</a>
+					{{ end }}
+				</li>
+			{{ end }}
+			</ul>
+			{{ else }}
+			<p>I haven't yet shared this talk with the world.</p>
+			{{ end }}
+		</div>
+
+		{{ partial "single/footer.html" . }}
+	</div>
+</main>
+
+{{ end }}

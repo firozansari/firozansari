@@ -1,0 +1,12 @@
+{
+  "reference": "./Leptonica.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Leptonica.json",
+  "referenceNumber": "152",
+  "name": "Leptonica License",
+  "licenseId": "Leptonica",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Leptonica"
+  ],
+  "isOsiApproved": false
+}

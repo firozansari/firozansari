@@ -1,0 +1,18 @@
+a[href^="/tags/"] {
+	color: #8ec07c;
+	border-bottom-color: #8ec07c;
+
+	&:visited {
+		color: #689d6a;
+		border-bottom-color: #689d6a;
+
+		&:hover {
+			color: black;
+			background-color: #689d6a;
+		}
+	}
+	&:hover {
+		color: black;
+		background-color: #8ec07c;
+	}
+}

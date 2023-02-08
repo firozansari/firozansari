@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<main>
+	<div class="post">
+		<div class="h-event">
+			{{ partial "single/title.html" . }}
+			{{ .Render "content" }}
+		</div>
+
+		<div class="post-details">
+			{{ partialCached "syndication.html" . (slice .Params.syndication .Params.Properties.syndication .Params.kind) }}
+			{{ partialCached "webmention.html" . .Permalink }}
+		</div>
+
+		{{ partial "single/footer.html" . }}
+	</div>
+</main>
+
+{{ end }}

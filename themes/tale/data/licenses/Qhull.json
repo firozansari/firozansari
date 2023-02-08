@@ -1,0 +1,12 @@
+{
+  "reference": "./Qhull.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Qhull.json",
+  "referenceNumber": "65",
+  "name": "Qhull License",
+  "licenseId": "Qhull",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Qhull"
+  ],
+  "isOsiApproved": false
+}

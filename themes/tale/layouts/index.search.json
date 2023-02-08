@@ -1,0 +1,13 @@
+{
+    "items": [
+		{{ range $i, $e := where (where .Site.RegularPages "Params.kind" "in" (slice "articles" "bookmarks")) "Params.deleted" false }}
+			{{ if $i }}, {{ end }}
+				{
+					"url": "{{ .Site.Params.LiveSiteUrl }}{{ .Permalink }}",
+					"title": "{{- trim (.Render "title") "\n" -}}",
+					"summary": "{{ .Description }}",
+					"content_text": {{ jsonify (.Render "plain") }}
+				}
+		{{ end }}
+    ]
+}

@@ -1,0 +1,12 @@
+{
+  "reference": "./Watcom-1.0.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Watcom-1.0.json",
+  "referenceNumber": "170",
+  "name": "Sybase Open Watcom Public License 1.0",
+  "licenseId": "Watcom-1.0",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/Watcom-1.0"
+  ],
+  "isOsiApproved": true
+}

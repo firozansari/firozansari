@@ -1,0 +1,13 @@
+{
+  "reference": "./Nokia.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/Nokia.json",
+  "referenceNumber": "318",
+  "name": "Nokia Open Source License",
+  "licenseId": "Nokia",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/nokia"
+  ],
+  "isOsiApproved": true
+}

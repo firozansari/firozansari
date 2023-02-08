@@ -1,0 +1,37 @@
+{{ if not (isset .Params "h") }}
+<article class="h-event">
+    <div>
+        <time datetime="{{ .Params.Start }}">{{ dateFormat "Mon, 02 Jan 2006 15:04" .Params.Start }}</time>
+
+        <h1>
+			<a class="p-name u-url" href="{{ .Permalink }}">{{ .Title }}</a>
+		</h1>
+        {{ .Render "content" }}
+
+        <p style="display: none">Published on <time datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" .PublishDate }}" class="dt-published">{{ dateFormat "2006-01-02T15:04:05-07:00" .PublishDate }}</time>.</p>
+    </div>
+</article>
+{{ else }}
+<article class="h-event">
+    <div>
+        <time datetime="{{ index .Params.Properties.start 0 }}">{{ dateFormat "Mon, 02 Jan 2006 15:04" (index .Params.Properties.start 0) }}</time>
+
+        <h1>
+			{{ if isset .Params.Properties "url" }}
+			<a class="p-name u-url" href="{{ index .Params.Properties.Url 0 }}">{{ index .Params.Properties.Name 0 }}</a>
+			{{ else }}
+			<a class="p-name u-url" href="{{ .Permalink }}">{{ index .Params.Properties.Name 0 }}</a>
+			{{ end }}
+        </h1>
+        {{ .Render "content" }}
+
+        <p class="post-meta">
+            <a href="{{ .Permalink }}">
+                <time datetime="{{ index (.Params.Properties.Published) 0 }}" class="dt-published">{{ dateFormat "Mon, 02 Jan 2006 15:04" (index (.Params.Properties.Published) 0) }}</time>
+            </a>
+        </p>
+
+        <p style="display: none">Published on <time datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" .PublishDate }}" class="dt-published">{{ dateFormat "2006-01-02T15:04:05-07:00" .PublishDate }}</time>.</p>
+    </div>
+</article>
+{{ end }}

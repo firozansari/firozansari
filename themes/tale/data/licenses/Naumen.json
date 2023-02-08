@@ -1,0 +1,12 @@
+{
+  "reference": "./Naumen.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Naumen.json",
+  "referenceNumber": "270",
+  "name": "Naumen Public License",
+  "licenseId": "Naumen",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/Naumen"
+  ],
+  "isOsiApproved": true
+}

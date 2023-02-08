@@ -1,0 +1,37 @@
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo v{{ $.Site.Hugo.Version }}">
+
+		<!-- WebMention -->
+		<link rel="webmention" href="https://webmention.io/{{ .Site.Params.WebMentionDomain }}/webmention" />
+		<link rel="pingback" href="https://webmention.io/{{ .Site.Params.WebMentionDomain }}/xmlrpc" />
+
+		<!-- IndieAuth -->
+		<link rel="authorization_endpoint" href="{{ .Site.Params.AuthorizationEndpoint }}">
+		<link rel="token_endpoint" href="{{ .Site.Params.TokenEndpoint }}">
+		<link rel="indieauth" href="{{ .Site.Params.IndieAuthServer }}">
+		<link rel="indieauth-metadata" href="{{ .Site.Params.IndieAuthServer }}/.well-known/oauth-authorization-server">
+
+
+
+
+		<!-- CSS -->
+		{{- $inServerMode	:= .Site.IsServer }}
+		{{- $cssTarget		:= "css/style.css" }}
+		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
+		{{- $style			:= resources.Get "scss/www.jvt.me.scss" | toCSS $cssOptions | fingerprint }}
+		<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+                {{ partialCached "lazy-css" "css/font-awesome.min.css" "css/font-awesome.min.css" }}
+                {{ partialCached "lazy-css" "css/asciinema-player.css" "css/asciinema-player.css" }}
+
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/png" href="/favicon.jpg">
+
+		<!-- Micropub -->
+		<link rel="micropub" href="{{ .Site.Params.MicroPubEndpoint }}">
+
+		<!-- Microsub -->
+		<link rel="microsub" href="{{ .Site.Params.MicroSubEndpoint }}">

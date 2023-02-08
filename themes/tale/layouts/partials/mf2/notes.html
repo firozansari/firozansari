@@ -1,0 +1,23 @@
+{{ with .Params.Properties.Name }}
+	<h1 class="p-name post-title">
+		{{ index . 0 | markdownify }}
+	</h1>
+	<div class="post-line"></div>
+{{ end }}
+
+
+{{ with .Params.Properties.Summary }}
+<p class="p-summary">
+	{{ index . 0 }}
+</p>
+{{ end }}
+
+{{ partialCached "mf2/property/content.html" . .Params.Properties }}
+
+{{ with $.Params.Properties.Photo }}
+  <p class="photos">
+    {{ range . }}
+    <img class="u-photo" src="{{ .photo }}" alt="{{ .alt }}" title="{{ .alt }}" loading=lazy />
+    {{ end }}
+  </p>
+{{ end }}

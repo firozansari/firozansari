@@ -1,0 +1,13 @@
+{
+  "reference": "./MIT.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/MIT.json",
+  "referenceNumber": "194",
+  "name": "MIT License",
+  "licenseId": "MIT",
+  "seeAlso": [
+    "http://www.opensource.org/licenses/MIT"
+  ],
+  "isOsiApproved": true
+}

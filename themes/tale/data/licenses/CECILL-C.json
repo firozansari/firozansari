@@ -1,0 +1,13 @@
+{
+  "reference": "./CECILL-C.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/CECILL-C.json",
+  "referenceNumber": "73",
+  "name": "CeCILL-C Free Software License Agreement",
+  "licenseId": "CECILL-C",
+  "seeAlso": [
+    "http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html\n    "
+  ],
+  "isOsiApproved": false
+}

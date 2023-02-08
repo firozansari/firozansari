@@ -1,0 +1,35 @@
+<article class="h-entry">
+
+  {{ partialCached "kind.html" . .Params.kind }}
+  <p>
+    <strong><a class="p-name u-url" href="{{ .Permalink }}">{{ .Title | markdownify }}</a></strong> ({{ .ReadingTime }} mins read).
+  </p>
+
+
+  {{ $image := .Site.Params.Image }}
+  {{ if .Params.Image }}
+    {{ $image = .Params.Image }}
+  {{ end }}
+  {{ if not (hasPrefix $image "https://media.jvt.me") }}
+    {{ $image = printf "%s%s" .Site.Params.LiveSiteUrl $image }}
+  {{ end }}
+
+  {{ if not (eq $image (printf "%s%s" .Site.Params.LiveSiteUrl .Site.Params.image)) }}
+    <img class="u-featured" src="{{ $image }}" alt="Featured image for sharing metadata for article" loading=lazy>
+  {{ end }}
+
+  <p class="p-summary">
+  {{ .Description | markdownify }}
+  </p>
+
+  <p class="post-meta">
+    <a class="u-uid u-url" href="{{ .Permalink }}">
+      <time datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" .PublishDate }}" class="dt-published">{{ dateFormat "Mon, 02 Jan 2006 15:04" .PublishDate }}</time>
+    </a> by {{ partialCached "inline-hcard.html" . }}.
+
+		<i class="fa fa-tags"></i>
+		{{ range .Params.Tags }}
+      <a href="/tags/{{ . }}/">#<span class="p-category">{{ . }}</span></a>
+    {{- end -}}.
+  </p>
+</article>

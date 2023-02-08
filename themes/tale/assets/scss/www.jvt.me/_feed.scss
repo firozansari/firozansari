@@ -1,0 +1,14 @@
+.h-feed {
+	article {
+		@extend %divided;
+	}
+}
+
+.h-feed-description {
+	@extend %divided;
+	font-size: 90%;
+}
+
+.post-meta {
+	font-size: 0.9rem;
+}

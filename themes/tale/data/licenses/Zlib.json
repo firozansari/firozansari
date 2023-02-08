@@ -1,0 +1,14 @@
+{
+  "reference": "./Zlib.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/Zlib.json",
+  "referenceNumber": "311",
+  "name": "zlib License",
+  "licenseId": "Zlib",
+  "seeAlso": [
+    "http://www.zlib.net/zlib_license.html",
+    "http://www.opensource.org/licenses/Zlib"
+  ],
+  "isOsiApproved": true
+}

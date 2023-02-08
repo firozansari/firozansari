@@ -1,0 +1,14 @@
+{
+  "reference": "./Artistic-2.0.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/Artistic-2.0.json",
+  "referenceNumber": "182",
+  "name": "Artistic License 2.0",
+  "licenseId": "Artistic-2.0",
+  "seeAlso": [
+    "http://www.perlfoundation.org/artistic_license_2_0",
+    "http://www.opensource.org/licenses/artistic-license-2.0"
+  ],
+  "isOsiApproved": true
+}

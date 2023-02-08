@@ -1,0 +1,12 @@
+{
+  "reference": "./psutils.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/psutils.json",
+  "referenceNumber": "120",
+  "name": "psutils License",
+  "licenseId": "psutils",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/psutils"
+  ],
+  "isOsiApproved": false
+}

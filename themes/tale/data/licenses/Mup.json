@@ -1,0 +1,12 @@
+{
+  "reference": "./Mup.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/Mup.json",
+  "referenceNumber": "341",
+  "name": "Mup License",
+  "licenseId": "Mup",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/Mup"
+  ],
+  "isOsiApproved": false
+}

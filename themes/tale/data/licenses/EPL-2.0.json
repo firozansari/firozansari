@@ -1,0 +1,14 @@
+{
+  "reference": "./EPL-2.0.html",
+  "isDeprecatedLicenseId": false,
+  "isFsfLibre": true,
+  "detailsUrl": "http://spdx.org/licenses/EPL-2.0.json",
+  "referenceNumber": "128",
+  "name": "Eclipse Public License 2.0",
+  "licenseId": "EPL-2.0",
+  "seeAlso": [
+    "https://www.eclipse.org/legal/epl-2.0",
+    "https://www.opensource.org/licenses/EPL-2.0"
+  ],
+  "isOsiApproved": true
+}

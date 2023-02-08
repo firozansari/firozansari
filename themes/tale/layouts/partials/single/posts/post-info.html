@@ -1,0 +1,27 @@
+<div class="post-info">
+    <span>{{ i18n "writtenBy" }}</span>
+    {{- if .Params.Author }}
+        {{ .Params.Author }}
+    {{- else }}
+        {{ .Site.Params.Author }}
+    {{- end }}
+
+    {{- if .PublishDate }}
+        <br>
+        <span>{{ i18n "on" }}&nbsp;</span><time datetime="{{ dateFormat "2006-01-02T15:04:05-0700" .PublishDate }}">{{ i18n "publishdate" . }}</time>
+    {{- end }}
+
+    {{- if eq .Type "posts" -}}
+    <br />
+    <span class="post-license">
+        {{ $licenseCode := index $.Site.Data.licenses .Params.License_Code }}
+        {{ $licenseProse := index $.Site.Data.licenses .Params.License_Prose }}
+        <a href="{{ index $licenseProse.seeAlso 0 }}"><i class="fa fa-book"></i> {{ $licenseProse.licenseId }}</a>
+        <a href="{{ index $licenseCode.seeAlso 0 }}"><i class="fa fa-code"></i> {{ $licenseCode.licenseId }}</a>
+    </span>
+
+    <br />
+    <span>{{ .ReadingTime }} mins</span>
+    {{- end -}}
+</div>
+

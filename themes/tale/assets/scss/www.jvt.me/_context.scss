@@ -1,0 +1,7 @@
+blockquote.twitter-context {
+	div {
+		/* overwrite anything that the Twitter embeds via Granary specify,
+		 * allowing the content to wrap inside its container */
+		white-space: pre-wrap !important;
+	}
+}

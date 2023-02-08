@@ -1,0 +1,12 @@
+{
+  "reference": "./diffmark.html",
+  "isDeprecatedLicenseId": false,
+  "detailsUrl": "http://spdx.org/licenses/diffmark.json",
+  "referenceNumber": "354",
+  "name": "diffmark license",
+  "licenseId": "diffmark",
+  "seeAlso": [
+    "https://fedoraproject.org/wiki/Licensing/diffmark"
+  ],
+  "isOsiApproved": false
+}
